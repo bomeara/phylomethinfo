@@ -1,4 +1,6 @@
 ---
+title: 'PhyloMeth: Syllabus'
+author: "Brian O'Meara"
 output:
   pdf_document: default
   html_document: default
