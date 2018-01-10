@@ -7,3 +7,21 @@ navbar:
       href: index.html
     - text: "Syllabus"
       href: syllabus.html
+    - text: "Exercises"
+      menu: 
+        - text: "Getting Started"
+          href: gettingstarted.html
+        - text: "Stealing Trees And Data"
+          href: gettingtreesanddata.html
+        - text: "Building Trees"
+          href: buildingtrees.html
+        - text: "Dating Trees"
+          href: datingtrees.html
+        - text: "Discrete Traits"
+          href: discrete.html
+        - text: "Continuous Traits"
+          href: continuous.html
+        - text: "Diversification"
+          href: diversification.html
+        - text: "Simulation"
+          href: simulation.hml
