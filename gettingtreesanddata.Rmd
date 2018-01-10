@@ -35,20 +35,20 @@ Once R is installed, it's time to install packages. Most packages are on CRAN, t
 One helpful way to navigate the array of R packages is through [task views](https://cran.r-project.org/web/views/): curated lists of packages. You can also **install all the packages in a view** and those they depend on. Do this:
 
 ```
-install.packages("ctv") #the CRAN task view package
+#install.packages("ctv") #the CRAN task view package
 ```
 
 And then choose the packages to install. For this class, I'd suggest Phylogenetics and WebTechnologies:
 
 ```
 library(ctv) #to load the package
-install.views(c("Phylogenetics", "WebTechnologies"))
+#install.views(c("Phylogenetics", "WebTechnologies"))
 ```
 
 We will be using unit testing to check homework. For this, you will need to install the `testthat` package.
 
 ```
-install.packages("testthat")
+#install.packages("testthat")
 ```
 
 Bioconductor is a separate repository with lots of packages for dealing with genetic data, especially nextgen data. To install this and a few initial packages:

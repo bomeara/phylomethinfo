@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Brian O’Meara" />
+
+
+<title>PhyloMeth: Getting Started</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">PhyloMeth</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="syllabus.html">Syllabus</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Exercises
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="gettingstarted.html">Getting Started</a>
+    </li>
+    <li>
+      <a href="gettingtreesanddata.html">Stealing Trees And Data</a>
+    </li>
+    <li>
+      <a href="buildingtrees.html">Building Trees</a>
+    </li>
+    <li>
+      <a href="datingtrees.html">Dating Trees</a>
+    </li>
+    <li>
+      <a href="discrete.html">Discrete Traits</a>
+    </li>
+    <li>
+      <a href="continuous.html">Continuous Traits</a>
+    </li>
+    <li>
+      <a href="diversification.html">Diversification</a>
+    </li>
+    <li>
+      <a href="simulation.hml">Simulation</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">PhyloMeth: Getting Started</h1>
+<h4 class="author"><em>Brian O’Meara</em></h4>
+
+</div>
+
+
+<p>##Objectives By the end of this week, you will have:</p>
+<ul>
+<li>All required tools installed</li>
+<li>Rudimentary understanding of
+<ul>
+<li>git</li>
+<li>command line</li>
+</ul></li>
+<li>Ability to do the first assignment</li>
+<li>Ability to talk to classmates</li>
+</ul>
+<p>Things I want you do are <strong>in bold</strong>.</p>
+<p>In this class we’ll be using a variety of programs and technologies. Most are open source: “software that can be freely used, changed, and shared (in modified or unmodified form) by anyone” <a href="https://opensource.org" class="uri">https://opensource.org</a>. For science, open source software is important: we build on the work of others in making discoveries, and open software allows others to build on it in the same way. It also aids transparency and reproducibility: you can go deep into code to see what is being done, and even if a developer stops supporting software, someone else can take it over and maintain it.</p>
+<p>Every student needs a <a href="http://github.com">GitHub</a> account so we can all use git together. Git is like a mixture of track changes in Microsoft Word, simultaneous editing in a Google Docs form, and a set of files backed up with Dropbox. It is used a lot by people writing software: you can keep track of who has added changes to code, roll back code to an earlier version, and merge code that was worked on different people at the same time. GitHub is a place where a lot of open source software is housed. It offers free accounts (with some restrictions). We’ll be using it to do homework and for our discussions.</p>
+<p><strong>Go to <a href="http://github.com">GitHub</a> now and get an account.</strong></p>
+<p>Once you have an account, **go to <a href="https://gitter.im/bomeara/phylometh**" class="uri">https://gitter.im/bomeara/phylometh**</a>. Gitter is a free service that allows for group chats (think of something like Skype chatting). I have made a public group for the course: anyone can join or read the texts. You can download various apps for Gitter for your laptop or phone: <a href="https://gitter.im/apps" class="uri">https://gitter.im/apps</a>.</p>
+<p>You will need a variety of software: <strong>right now, R and git</strong>; eventually, things like RevBayes, BEAST, and more.</p>
+<p>On a Mac, it is easiest to first install homebrew (will help a lot with later steps): see <a href="http://brew.sh">here</a> for how to do that. Then install git. For Linux, you probably already know how to use a package manager. For Windows, there is a git installer, but you might consider something like cygwin as well.</p>
+<p>To <strong>install R</strong>, go to your preferred CRAN mirror to download it: I’d suggest <a href="https://cran.rstudio.com" class="uri">https://cran.rstudio.com</a>. What does all this mean? CRAN = Comprehensive R Archive Network: it’s where a lot of R packages are stored and readied for installation. A mirror is a computer that stores a copy of files on another computer. This is an old school approach to creating redundancy and convenience: rather than every R user in the world trying to copy a file off of one computer’s hard drive connected to the wall with one ethernet cable, there’s a whole set of computers, often with one fairly close to the user and so with faster download speeds. However, these can have their own issues: some might not update their copies often (look at <a href="https://cran.r-project.org/mirmon_report.html">this</a> to see some of these), some are slow, etc. A more modern approach is a content delivery network (CDN): a distributed set of servers, and a user is automatically routed to the best one for her or him given location, speed, server status, etc. When you watch a movie on Netflix, you’re not using the same server as everyone else, for example. The R mirror I suggest you use is one run by the RStudio commercial company: it’s actually a CDN and is secure and fast. Unlike the other R mirrors, it also records number of times each package is downloaded, which can be useful data for package authors.</p>
+<p>Once R is installed, it’s time to install packages. Most packages are on CRAN, though an increasing number are just on R-Forge, GitHub, or other sites. (CRAN has volunteers who check packages thoroughly to make sure they install on a variety of operating systems, keep to modern coding standards, deal with licensing appropriately, etc. (they can’t, of course, ensure that the statistical approaches are sound): this is great for users but some developers find it difficult, so put their packages elsewhere).</p>
+<p>One helpful way to navigate the array of R packages is through <a href="https://cran.r-project.org/web/views/">task views</a>: curated lists of packages. You can also <strong>install all the packages in a view</strong> and those they depend on. Do this:</p>
+<pre><code>#install.packages(&quot;ctv&quot;) #the CRAN task view package</code></pre>
+<p>And then choose the packages to install. For this class, I’d suggest Phylogenetics and WebTechnologies:</p>
+<pre><code>library(ctv) #to load the package
+#install.views(c(&quot;Phylogenetics&quot;, &quot;WebTechnologies&quot;))</code></pre>
+<p>We will be using unit testing to check homework. For this, you will need to install the <code>testthat</code> package.</p>
+<pre><code>#install.packages(&quot;testthat&quot;)</code></pre>
+<p>Bioconductor is a separate repository with lots of packages for dealing with genetic data, especially nextgen data. To install this and a few initial packages:</p>
+<pre><code>source(&quot;http://bioconductor.org/biocLite.R&quot;)
+biocLite()
+#biocLite(&quot;Biostrings&quot;)</code></pre>
+<p>I would suggest using RStudio for writing R and handling markdown (see below). It is free and open source; you can install it from <a href="https://www.rstudio.com/products/RStudio/">here</a>.</p>
+<p>Once you have all this done, it is time to start the exercise.</p>
+<section id="exercise" class="level2">
+<h2>Exercise</h2>
+<p>We are going to adopt a programming approach that has you write functions in one file, then run analyses in an R markdown document. This very document is an R markdown doc, actually. Markdown is like a very lightweight alternative to html that is far more readable. Rather than writing <code>&lt;b&gt;this&lt;/b&gt;</code> to make <strong>bold</strong> text, you can instead write <code>**this**</code>. “So what?” was my first thought, but it turns out it does make a lot of things easier. R markdown lets you embed R calls within a document and so intersperse text and code very naturally. It can embed figures, too. In fact, the book for the course is written in R markdown.</p>
+<p>Your assignment has three parts:</p>
+<ol type="1">
+<li>Using github, <strong>fork</strong> <a href="https://github.com/bomeara/phylometh" class="uri">https://github.com/bomeara/phylometh</a>. Then <strong>clone</strong> it. Your clone is how you will do homework: you will change things, commit them, and then try doing a pull request. I will review your pull requests to give you feedback on the homework.</li>
+<li>Figure out how to write R markdown by modifying this file as indicated below.</li>
+<li>Fix the functions in <code>gettingstarted_exercise.R</code></li>
+</ol>
+<section id="r-markdown-exercise" class="level3">
+<h3>R Markdown Exercise</h3>
+<p>R calls in R markdown go within sections delimited by three backticks (`, the character just to the left of the 1 on US English keyboards; YMMV on other keyboards). For R code to execute, you must include {r} after the first three. Look in the raw file here at the section below:</p>
+<pre class="r"><code>2+3</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>library(ape)
+plot(rcoal(5))</code></pre>
+<p><img src="gettingstarted_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Look at the Markdown Cheatsheet <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">PDF</a> for more info.</p>
+<p><em>To do</em></p>
+<p>Take the following lines and do what they say.</p>
+<p>MAKE THIS LINE BOLD</p>
+<p>MAKE THE WORD ITALIC ITALICIZED</p>
+<p>MAKE THE FOLLOWING R CODE CREATE A PLOT IN THIS DOCUMENT</p>
+<p>plot(density(rnorm(1000)))</p>
+</section>
+<section id="r-exercise" class="level3">
+<h3>R exercise</h3>
+<p>Edit gettingstarted_exercise.R and this document so that this code all runs properly in this document. You will need to change <code>eval=FALSE</code> to <code>eval=TRUE</code> within the curly brackets:</p>
+<pre class="r"><code>library(ape)
+library(ips)
+source(&quot;gettingstarted_exercise.R&quot;)
+print(paste(&quot;For 15 taxa there are&quot;, GetHowManyTrees(15), &quot;trees&quot;))
+print(GetAlignment())</code></pre>
+</section>
+</section>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

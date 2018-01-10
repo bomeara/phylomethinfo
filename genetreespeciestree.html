@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>genetreespeciestree.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">PhyloMeth</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="syllabus.html">Syllabus</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Exercises
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="gettingstarted.html">Getting Started</a>
+    </li>
+    <li>
+      <a href="gettingtreesanddata.html">Stealing Trees And Data</a>
+    </li>
+    <li>
+      <a href="buildingtrees.html">Building Trees</a>
+    </li>
+    <li>
+      <a href="datingtrees.html">Dating Trees</a>
+    </li>
+    <li>
+      <a href="discrete.html">Discrete Traits</a>
+    </li>
+    <li>
+      <a href="continuous.html">Continuous Traits</a>
+    </li>
+    <li>
+      <a href="diversification.html">Diversification</a>
+    </li>
+    <li>
+      <a href="simulation.hml">Simulation</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<section id="gene-tree-species-tree" class="level1">
+<h1>Gene Tree Species Tree</h1>
+<section id="objectives" class="level2">
+<h2>Objectives</h2>
+<p>By the end of this chapter, you will:</p>
+<ul>
+<li>Understand why gene trees and species trees may not always agree</li>
+<li>Know about some of the approaches in this area</li>
+<li>Understand about phylogenetic networks</li>
+</ul>
+<p>First, we will be looking at distinctions between gene trees and species trees. For this, we’ll be using Liang Liu’s phybase package. This isn’t on CRAN, but it is available on his <a href="https://faculty.franklin.uga.edu/lliu/content/phybase?">website</a>. However, we’ll be using a version I modified slightly and put on github. Liang’s package uses <a href="http://evolution.genetics.washington.edu/phylip/newicktree.html">newick</a> format (yes, named after the <a href="http://newicks.com">restaurant</a>), but with additional options for including population size (branch width, included as a <code>#</code> sign followed by a number) as well as the more traditional branch length. Both matter for coalescence: two copies are much more likely to have coalesced on a long, narrow branch than a short, fat one. Most packages in R instead use ape’s <code>phylo</code> format, so I wrote a few functions to deal with that. This version of the package is on github; to install it:</p>
+<pre><code>library(devtools)
+#install_github(&quot;bomeara/phybase&quot;)</code></pre>
+<p>For real science, Liang’s is the canonical one (and definitely cite his) but this will be easier for us to use for class.</p>
+<p>First, get a tree from Open Tree of Life. We’ll get a recent plant tree from Beaulieu et al:</p>
+<pre class="r"><code>library(rotl)
+library(ape)
+phy &lt;- get_study_tree(&quot;ot_485&quot;, &quot;tree1&quot;)
+plot(phy, cex=0.3)</code></pre>
+<p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Let’s simplify by dropping some taxa:</p>
+<pre class="r"><code>library(geiger)
+phy &lt;- drop.random(phy, Ntip(phy) - 10)
+plot(phy)
+axisPhylo()</code></pre>
+<p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>We can simulate gene trees on this tree:</p>
+<pre class="r"><code>library(phybase)
+gene.tree &lt;- sim.coaltree.phylo(phy, pop.size=1e-12)
+plot(gene.tree)</code></pre>
+<p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>And it probably looks very similar to the initial tree:</p>
+<pre class="r"><code>library(phytools)
+plot(cophylo(phy, gene.tree, cbind(sort(phy$tip.label), sort(gene.tree$tip.label))))</code></pre>
+<pre><code>## Rotating nodes to optimize matching...
+## Done.</code></pre>
+<p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>[Note I’m being a bit sloppy here: the initial branch lengths of the tree we used are in millions of years (i.e., 5 = 5 MY) while the coalescent sim is treating these as coalescent time units: there would be even lower chance of incongruence if we converted the former into the latter. Unfortunately, the simulator fails with branch lengths that are realistically long for this tree.]</p>
+<p>So, does this mean gene tree species tree issues aren’t a problem?</p>
+<p>Well, it depends on the details of the tree. One common misconception is that gene tree species tree issues only relate to trees for recent events. This problem can happen any time there are short, fat branches, where lack of coalescence of copies can occur.</p>
+<pre class="r"><code>species.tree &lt;- rcoal(7)
+species.tree$edge.length &lt;- species.tree$edge.length / (10*max(branching.times(species.tree)))
+gene.tree &lt;- sim.coaltree.phylo(species.tree)
+plot(cophylo(species.tree, gene.tree, cbind(sort(species.tree$tip.label), sort(gene.tree$tip.label))))</code></pre>
+<pre><code>## Rotating nodes to optimize matching...
+## Done.</code></pre>
+<p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>You should see (in most iterations), the above code giving a mismatch between the gene tree and the species tree (the species tree has little height). Now, let’s lengthen the tips of the species tree:</p>
+<pre class="r"><code>tip.rows &lt;- which(species.tree$edge[,2]&lt;=Ntip(species.tree))
+species.tree2 &lt;- species.tree
+species.tree2$edge.length[tip.rows] &lt;- 100 + species.tree2$edge.length[tip.rows]
+gene.tree2 &lt;- sim.coaltree.phylo(species.tree2)
+plot(cophylo(species.tree2, gene.tree2, cbind(sort(species.tree2$tip.label), sort(gene.tree2$tip.label))))</code></pre>
+<pre><code>## Rotating nodes to optimize matching...
+## Done.</code></pre>
+<p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>It looks like a mismatch, but it’s hard to see, since the tips are so long. So plot the cladogram instead [we need to manually change branch lengths to do this, though note we do not resimulate the gene tree].</p>
+<pre class="r"><code>species.tree2.clado &lt;- compute.brlen(species.tree2)
+gene.tree2.clado &lt;- compute.brlen(gene.tree2)
+plot(cophylo(species.tree2.clado, gene.tree2.clado, cbind(sort(species.tree2.clado$tip.label),
+sort(gene.tree2.clado$tip.label))))</code></pre>
+<pre><code>## Rotating nodes to optimize matching...
+## Done.</code></pre>
+<p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>So we can see that even though the relevant divergences happened long ago, gene tree species tree issues are still a problem.</p>
+</section>
+</section>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
