@@ -6,8 +6,6 @@ output:
   html_document: default
   word_document: default
 ---
-The syllabus (mostly the schedule) will be updated throughout the semester.  I have also embedded it below. 
-
 
 ## Phylogenetic Methods (PhyloMeth). Spring 2018
 
@@ -17,7 +15,7 @@ Syllabus version: `r format(Sys.time(), '%I:%M %p, %d %B, %Y')`
 
 Instructor: **[Brian O'Meara](http://www.brianomeara.info)** (bomeara@utk.edu)
 
-Course website: http://phylometh.org
+Course website: http://phylometh.info
 
 Office Hours (446 Hesler) by appointment.
 

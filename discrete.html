@@ -245,9 +245,11 @@ $(document).ready(function () {
 <p>These are useful packages in this area (far from exhaustive list).</p>
 <pre class="r"><code>library(ape)
 library(geiger)
-library(phytools)
-library(phangorn)
+library(phytools)</code></pre>
+<pre><code>## Loading required package: maps</code></pre>
+<pre class="r"><code>library(phangorn)
 library(corHMM)</code></pre>
+<pre><code>## Loading required package: GenSA</code></pre>
 <p>You’ll need to get data into R in some way.</p>
 <pre class="r"><code>tree &lt;- read.tree(&quot;____PATH_TO_TREE_OR_SOME_OTHER_WAY_OF_GETTING_A_TREE____&quot;)
 discrete.data &lt;- read.csv(file=&quot;____PATH_TO_DATA_OR_SOME_OTHER_WAY_OF_GETTING_TRAITS____&quot;, stringsAsFactors=FALSE) #death to factors.</code></pre>
