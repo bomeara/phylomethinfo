@@ -12,19 +12,30 @@ navbar:
     - text: Getting Started
       href: gettingstarted.html
     - text: Stealing Trees And Data
-      href: gettingtreesanddata.html
+   #   href: gettingtreesanddata.html
     - text: Building Trees
-      href: buildingtrees.html
+   #   href: buildingtrees.html
     - text: Dating Trees
-      href: datingtrees.html
+   #   href: datingtrees.html
     - text: Discrete Traits
-      href: discrete.html
+    #  href: discrete.html
     - text: Continuous Traits
-      href: continuous.html
+     # href: continuous.html
     - text: Diversification
-      href: diversification.html
+    #  href: diversification.html
     - text: Simulation
-      href: simulation.hml
+     # href: simulation.hml
+  - text: Videos
+    href: https://www.youtube.com/channel/UCoE9-jWQBwC3iyzMBE3nJNA/
+  - text: Book
+    menu:
+    - text: HTML version
+      href: https://bookdown.org/bomeara/comparative-methods/
+    - text: PDF version
+      href: https://bookdown.org/bomeara/comparative-methods/comparative-methods.pdf
+    - text: Git repo
+      href: https://github.com/bomeara/ComparativeMethodsInR
+
 output:
   html_document:
     theme: flatly

@@ -22,9 +22,9 @@ Every student needs a [GitHub](http://github.com) account so we can all use git 
 
 **Go to [GitHub](http://github.com) now and get an account.**
 
-You will need a variety of software: **right now, R and git**; eventually, things like RevBayes, BEAST, and more.
+You will need a variety of software: **right now, R and git**; eventually, things like RevBayes, BEAST, and more. Having access to the command line (i.e., by using /Applications/Utilities/Terminal.app on a Mac) will make things easier.
 
-On a Mac, it is easiest to first install homebrew (will help a lot with later steps): see [here](http://brew.sh) for how to do that. Then install git. For Linux, you probably already know how to use a package manager. For Windows, there is a git installer, but you might consider something like cygwin as well.
+On a Mac, it is easiest to first install homebrew (will help a lot with later steps): see [here](http://brew.sh) for how to do that. Then install git. For Linux, you probably already know how to use a package manager. For Windows, there is a git installer, but you might consider something like cygwin as well. Another option for all platforms is to use docker. In this case, it's a way of installing tools to run in their own linux environment, but there's also a web interface. To do this, [install Docker community edition](https://docs.docker.com/engine/installation/). Then follow the instructions at https://github.com/bomeara/phydocker for how to install and use a docker image that has R with all the packages we will need and various other useful software.
 
 To **install R**, go to your preferred CRAN mirror to download it: I'd suggest https://cran.rstudio.com. What does all this mean? CRAN = Comprehensive R Archive Network: it's where a lot of R packages are stored and readied for installation. A mirror is a computer that stores a copy of files on another computer. This is an old school approach to creating redundancy and convenience: rather than every R user in the world trying to copy a file off of one computer's hard drive connected to the wall with one ethernet cable, there's a whole set of computers, often with one fairly close to the user and so with faster download speeds. However, these can have their own issues: some might not update their copies often (look at [this](https://cran.r-project.org/mirmon_report.html) to see some of these), some are slow, etc. A more modern approach is a content delivery network (CDN): a distributed set of servers, and a user is automatically routed to the best one for her or him given location, speed, server status, etc. When you watch a movie on Netflix, you're not using the same server as everyone else, for example. The R mirror I suggest you use is one run by the RStudio commercial company: it's actually a CDN and is secure and fast. Unlike the other R mirrors, it also records number of times each package is downloaded, which can be useful data for package authors.
 
@@ -97,12 +97,24 @@ plot(density(rnorm(1000)))
 
 ### R exercise
 
-Edit gettingstarted_exercise.R and this document so that this code all runs properly in this document. You will need to change `eval=FALSE` to `eval=TRUE` within the curly brackets:
+Edit this document so that this code all runs properly. You will need to change `eval=FALSE` to `eval=TRUE` within the curly brackets, then do ```rmarkdown::render("gettingstarted.Rmd")```.
+
 
 ```{r eval=FALSE}
-library(ape)
-library(ips)
-source("gettingstarted_exercise.R")
-print(paste("For 15 taxa there are", GetHowManyTrees(15), "trees"))
-print(GetAlignment())
+# Some basic tests to make sure things are running.
+
+GetHowManyTrees <- function(ntaxa=10) {
+	#ape can compute this for us.
+	result <- ___SOME FUNCTION WITH AN ARGUMENT_____
+	return(result)
+}
+
+GetAlignment <- function() {
+	#Let's see where mafft is installed
+	library(ape)
+	print(system("which mafft"))
+	data(woodmouse)
+	result <- ips::mafft(____SOME INPUT ARGUMENT____)
+	return(result)
+}
 ```

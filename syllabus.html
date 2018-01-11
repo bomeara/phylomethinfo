@@ -379,26 +379,33 @@ $(document).ready(function () {
     <li>
       <a href="gettingstarted.html">Getting Started</a>
     </li>
+    <li class="dropdown-header">Stealing Trees And Data</li>
+    <li class="dropdown-header">Building Trees</li>
+    <li class="dropdown-header">Dating Trees</li>
+    <li class="dropdown-header">Discrete Traits</li>
+    <li class="dropdown-header">Continuous Traits</li>
+    <li class="dropdown-header">Diversification</li>
+    <li class="dropdown-header">Simulation</li>
+  </ul>
+</li>
+<li>
+  <a href="https://www.youtube.com/channel/UCoE9-jWQBwC3iyzMBE3nJNA/">Videos</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Book
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="gettingtreesanddata.html">Stealing Trees And Data</a>
+      <a href="https://bookdown.org/bomeara/comparative-methods/">HTML version</a>
     </li>
     <li>
-      <a href="buildingtrees.html">Building Trees</a>
+      <a href="https://bookdown.org/bomeara/comparative-methods/comparative-methods.pdf">PDF version</a>
     </li>
     <li>
-      <a href="datingtrees.html">Dating Trees</a>
-    </li>
-    <li>
-      <a href="discrete.html">Discrete Traits</a>
-    </li>
-    <li>
-      <a href="continuous.html">Continuous Traits</a>
-    </li>
-    <li>
-      <a href="diversification.html">Diversification</a>
-    </li>
-    <li>
-      <a href="simulation.hml">Simulation</a>
+      <a href="https://github.com/bomeara/ComparativeMethodsInR">Git repo</a>
     </li>
   </ul>
 </li>
@@ -423,14 +430,14 @@ $(document).ready(function () {
 <section id="phylogenetic-methods-phylometh.-spring-2018" class="level2">
 <h2>Phylogenetic Methods (PhyloMeth). Spring 2018</h2>
 <p>UT students may sign up at EEB 603, CRN 30253 (grad students) or EEB 504, CRN 31819 (advanced undergrads)</p>
-<p>Syllabus version: 08:58 AM, 11 January, 2018</p>
+<p>Syllabus version: 09:20 AM, 11 January, 2018</p>
 <p>Instructor: <strong><a href="http://www.brianomeara.info">Brian O’Meara</a></strong> (<a href="mailto:bomeara@utk.edu">bomeara@utk.edu</a>)</p>
 <p>Course website: <a href="http://phylometh.info" class="uri">http://phylometh.info</a></p>
-<p>Office Hours (446 Hesler) by appointment.</p>
+<p>Office Hours (446 Hesler) Tuesdays 12:30 - 1:30 pm and by appointment.</p>
 <p>####Anonymous feedback <a href="http://www.brianomeara.info/feedback" class="uri">http://www.brianomeara.info/feedback</a></p>
 <section id="what-you-will-learn" class="level4">
 <h4>What you will learn</h4>
-<p>This is a modern class in phylogenetic methods. You will learn how to get data, build a tree, use comparative methods, and how to make new methods. More importantly, you will learn <em>why</em> to do all this.</p>
+<p>This is a modern class in phylogenetic methods. You will learn how to get data, build a tree, use comparative methods, and how to make new methods. More importantly, you will learn <strong>why</strong> to do all this.</p>
 </section>
 <section id="requirements" class="level4">
 <h4>Requirements</h4>
@@ -450,11 +457,12 @@ $(document).ready(function () {
 </section>
 <section id="evaluation" class="level4">
 <h4>Evaluation</h4>
-<p>Grading will be based on effort and performance. Some of the things will be harder for some students than others just given differences in what they’ve been exposed to so far, and I don’t want to penalize students who are less skilled at R, for example. But I do require that you put in work on this class: work through the exercises, think about the papers, etc. Much of the homework is chewy, so it will take some thought to get through, and you might not be able to do all of this. That’s ok.</p>
+<p>Grading will be based on effort and performance. Some of the things will be harder for some students than others just given differences in what they’ve been exposed to so far, and I don’t want to penalize students who are less skilled at R, for example. But I do require that you put in work on this class: work through the exercises, think about the papers, etc. Much of the homework is chewy, so it will take some thought to get through, and you might not be able to do all of this. That’s ok. <em>But ask for help!</em></p>
 <ul>
 <li>EEB603 final project will be done solo (though consulting is ok)</li>
 <li>EEB504 final project will be done in pairs</li>
 </ul>
+<p>These projects should be able to serve as the core for a dissertation chapter or published paper: still requiring more work and writing, but a solid idea with preliminary results.</p>
 </section>
 <section id="teaching" class="level4">
 <h4>Teaching</h4>
@@ -473,8 +481,7 @@ $(document).ready(function () {
 <li>Items: R, github, gitter, unit testing</li>
 <li>Instructions: <a href="http://rpubs.com/bomeara/phylomethsoftwareinstall" class="uri">http://rpubs.com/bomeara/phylomethsoftwareinstall</a></li>
 <li>Exercise: <a href="https://github.com/bomeara/phylometh/blob/master/exercises/gettingstarted/GettingStarted.Rmd">Getting Started</a></li>
-<li>One way to do the exercise is to fork the <a href="https://github.com/bomeara/phylometh">github repo</a>, clone it to your computer, start editing documents (such as those in <code>exercises/gettingstarted</code>), then <code>git commit -m&quot;done homework&quot; -a</code>, then do a pull request.</li>
-<li><a href="https://www.youtube.com/watch?v=D_AXmSIvgr0&amp;t=1s">Recorded class</a></li>
+<li>One way to do the exercise is to fork the <a href="https://github.com/bomeara/phylomethinfo">github repo</a>, clone it to your computer, start editing documents, then <code>git commit -m&quot;done homework&quot; -a</code>, then do a pull request.</li>
 </ul></li>
 <li>Week 2, Jan 16
 <ul>
@@ -484,7 +491,6 @@ $(document).ready(function () {
 <li>Items: Sequences, trees, name resolution, alignment</li>
 <li>Exercise: Getting trees: <a href="https://github.com/bomeara/phylometh/blob/master/exercises/gettingtreesanddata/exercise.R" class="uri">https://github.com/bomeara/phylometh/blob/master/exercises/gettingtreesanddata/exercise.R</a></li>
 <li>In class: Discussion of what kinds of data you need for your questions, what kind of trees you need.</li>
-<li><a href="https://www.youtube.com/watch?v=KQNppZctCNI">Recorded class</a></li>
 </ul></li>
 <li>Week 3, Jan 23 &amp; Jan 25
 <ul>
@@ -505,7 +511,6 @@ $(document).ready(function () {
 <li><a href="http://treethinkers.org/tutorials/divergence-time-estimation-using-beast/">BEAST tutorials</a>: Bayesian tree inference program, especially used for getting chronograms.</li>
 <li><a href="https://de.cyverse.org/de/">Cyverse discovery environment</a>: Free service (thanks, NSF!) for running phylogenetic (and other) software</li>
 </ul></li>
-<li><a href="https://www.youtube.com/watch?v=0Vo9LJgRR0Y">Recorded class</a></li>
 </ul></li>
 <li>Week 4, Jan 30 &amp; Feb 1
 <ul>
@@ -537,7 +542,6 @@ $(document).ready(function () {
 <ul>
 <li><a href="http://revbayes.github.io/tutorials.html">RevBayes</a> tutorials on dating.</li>
 </ul></li>
-<li><a href="https://www.youtube.com/watch?v=FI2rcVLEu34">Recorded class</a></li>
 </ul></li>
 <li>Week 6, Feb 13 &amp; Feb 15
 <ul>
@@ -550,7 +554,6 @@ $(document).ready(function () {
 <li><a href="https://doi.org/10.1080/106351501753462876">Lewis, 2001</a>: MKV model</li>
 <li><a href="https://doi.org/10.1146/annurev-ecolsys-110411-160331">O’Meara, 2012</a>: Review of models</li>
 </ul></li>
-<li><a href="https://github.com/bomeara/phylometh/tree/master/exercises/discrete">Exercise</a></li>
 </ul></li>
 <li>Week 7, Feb 20 &amp; Feb 22
 <ul>
@@ -564,7 +567,6 @@ $(document).ready(function () {
 <li><a href="https://doi.org/10.1146/annurev-ecolsys-110411-160331">O’Meara, 2012</a>: Not nearly as important as the ones above, but an intro to models that shows how I think.</li>
 <li><a href="https://bookdown.org/bomeara/comparative-methods/brownian-motion-and-correlations.html">Course Book</a></li>
 </ul></li>
-<li><a href="https://github.com/bomeara/phylometh/tree/master/exercises/continuous">Exercise</a></li>
 </ul></li>
 <li>Week 8, Feb 27 &amp; Mar 1
 <ul>
@@ -576,7 +578,6 @@ $(document).ready(function () {
 <li><a href="http://dx.doi.org/10.1098/rspb.1994.0006">Pagel, 1994</a>: Pagel 94 correlation</li>
 <li><a href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syu070">Maddison &amp; FitzJohn, 2015</a>: A big problem with correlation (and other issues)</li>
 </ul></li>
-<li><a href="https://github.com/bomeara/phylometh/tree/master/exercises/correlations">Exercise</a></li>
 </ul></li>
 <li>Week 9, Mar 6 &amp; Mar 8
 <ul>
@@ -598,7 +599,6 @@ $(document).ready(function () {
 <li><a href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syu070">Maddison &amp; FitzJohn, 2015</a>: Already read it, but reread for this week.</li>
 <li><a href="https://doi.org/10.1093/sysbio/syw022">Beaulieu &amp; O’Meara, 2016</a>: A hidden state version of the BiSSE model.</li>
 </ul></li>
-<li><a href="https://github.com/bomeara/phylometh/tree/master/exercises/diversification/exercises/diversification/diversification_exercise.Rmd">Exercise</a></li>
 </ul></li>
 <li>Week 11, Mar 27 &amp; Mar 29
 <ul>
@@ -623,6 +623,9 @@ $(document).ready(function () {
 </ul></li>
 </ul>
 <p><strong>Course made possible by</strong>: NSF CAREER grant to O’Meara &amp; ongoing support from the Department of Ecology &amp; Evolutionary Biology, U. of Tennessee, Knoxville.</p>
+<p>My goal is to have you learn. If you are having trouble with something in the course, or if there is a topic you just have to learn more about, let me know (email, office hours, online forum, etc.). Faculty often use evaluations at the end of the semester to get info from students so we can improve before the next class, but this does not help you directly. To allow the class to improve while you are taking it, I have created a site for anonymous feedback at <a href="http://brianomeara.info/teaching/feedback/" class="uri">http://brianomeara.info/teaching/feedback/</a> (and yes, it is really anonymous). Let me know things that are going well or poorly — both are important. I might not implement all your suggestions, but they will all be read and considered, generally the same day you submit them.</p>
+<p>Any student who feels s/he may need an accommodation based on the impact of a disability should contact me privately to discuss specific needs. Please contact the Office of Disability Services at 865-974-6087 in Dunford Hall to coordinate reasonable accommodations for students with documented disabilities.</p>
+<p>All relevant University policies (including, but not limited to, policies on academic integrity, attendance, etc.) apply to this course. In the case of any conflict between the policies in this syllabus and University policy, University policy applies. The instructor reserves the right to revise, alter, and/or amend this syllabus as necessary. Students will be notified by email of any such revisions, alterations, and/or amendments.</p>
 </section>
 </section>
 

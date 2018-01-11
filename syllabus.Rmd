@@ -17,13 +17,13 @@ Instructor: **[Brian O'Meara](http://www.brianomeara.info)** (bomeara@utk.edu)
 
 Course website: http://phylometh.info
 
-Office Hours (446 Hesler) by appointment.
+Office Hours (446 Hesler) Tuesdays 12:30 - 1:30 pm and by appointment.
 
 ####Anonymous feedback
 http://www.brianomeara.info/feedback
 
 #### What you will learn
-This is a modern class in phylogenetic methods. You will learn how to get data, build a tree, use comparative methods, and how to make new methods. More importantly, you will learn _why_ to do all this.
+This is a modern class in phylogenetic methods. You will learn how to get data, build a tree, use comparative methods, and how to make new methods. More importantly, you will learn **why** to do all this.
 
 #### Requirements
 * A laptop on which you can install software (have root / admin access)
@@ -41,10 +41,12 @@ I am writing a textbook as part of the course
 It will be updated as we go, so check back frequently.
 
 #### Evaluation
-Grading will be based on effort and performance. Some of the things will be harder for some students than others just given differences in what they've been exposed to so far, and I don't want to penalize students who are less skilled at R, for example. But I do require that you put in work on this class: work through the exercises, think about the papers, etc. Much of the homework is chewy, so it will take some thought to get through, and you might not be able to do all of this. That's ok.
+Grading will be based on effort and performance. Some of the things will be harder for some students than others just given differences in what they've been exposed to so far, and I don't want to penalize students who are less skilled at R, for example. But I do require that you put in work on this class: work through the exercises, think about the papers, etc. Much of the homework is chewy, so it will take some thought to get through, and you might not be able to do all of this. That's ok. *But ask for help!*
 
 * EEB603 final project will be done solo (though consulting is ok)
 * EEB504 final project will be done in pairs
+
+These projects should be able to serve as the core for a dissertation chapter or published paper: still requiring more work and writing, but a solid idea with preliminary results.
 
 #### Teaching
 The class is generally flipped: rather than me droning at the front of the room, I'll be releasing videos online for you to watch. They will be linked to from this syllabus. In class, talk about what was not clear from the videos about methods, and we'll dig into that. We can also work on problematic parts of the exercises (you should do most of them before class) and talk about papers.
@@ -59,8 +61,7 @@ There is a no-credit online option, as well.
     + Items: R, github, gitter, unit testing
     + Instructions: http://rpubs.com/bomeara/phylomethsoftwareinstall
     + Exercise: [Getting Started](https://github.com/bomeara/phylometh/blob/master/exercises/gettingstarted/GettingStarted.Rmd)
-    + One way to do the exercise is to fork the [github repo](https://github.com/bomeara/phylometh), clone it to your computer, start editing documents (such as those in `exercises/gettingstarted`), then `git commit -m"done homework" -a`, then do a pull request.
-    + [Recorded class](https://www.youtube.com/watch?v=D_AXmSIvgr0&t=1s)
+    + One way to do the exercise is to fork the [github repo](https://github.com/bomeara/phylomethinfo), clone it to your computer, start editing documents, then `git commit -m"done homework" -a`, then do a pull request.
 
 * Week 2, Jan 16
     + Topic: Gathering data
@@ -69,7 +70,6 @@ There is a no-credit online option, as well.
     + Items: Sequences, trees, name resolution, alignment
     + Exercise: Getting trees: https://github.com/bomeara/phylometh/blob/master/exercises/gettingtreesanddata/exercise.R
     + In class: Discussion of what kinds of data you need for your questions, what kind of trees you need.
-    + [Recorded class](https://www.youtube.com/watch?v=KQNppZctCNI)
 
 * Week 3, Jan 23 & Jan 25
     + Topic: Building trees
@@ -85,8 +85,7 @@ There is a no-credit online option, as well.
         + [RevBayes tutorials](https://revbayes.github.io/tutorials.html): Bayesian program with many different models.
         + [BEAST tutorials](http://treethinkers.org/tutorials/divergence-time-estimation-using-beast/): Bayesian tree inference program, especially used for getting chronograms.
         + [Cyverse discovery environment](https://de.cyverse.org/de/): Free service (thanks, NSF!) for running phylogenetic (and other) software
-    + [Recorded class](https://www.youtube.com/watch?v=0Vo9LJgRR0Y)
-        
+
 
 * Week 4, Jan 30 & Feb 1
     + Topic: Building trees
@@ -111,7 +110,6 @@ There is a no-credit online option, as well.
         + [Course book](https://bookdown.org/bomeara/comparative-methods/dating.html)
     + Exercise
         + [RevBayes](http://revbayes.github.io/tutorials.html) tutorials on dating. 
-    + [Recorded class](https://www.youtube.com/watch?v=FI2rcVLEu34)
 
 * Week 6, Feb 13 & Feb 15
     + Topic: Discrete character models
@@ -121,7 +119,6 @@ There is a no-credit online option, as well.
         + [Pagel, 1999](https://doi.org/10.1080/106351599260184): Ancestral state reconstruction
         + [Lewis, 2001](https://doi.org/10.1080/106351501753462876): MKV model
         + [O'Meara, 2012](https://doi.org/10.1146/annurev-ecolsys-110411-160331): Review of models
-    + [Exercise](https://github.com/bomeara/phylometh/tree/master/exercises/discrete)
 
 
 * Week 7, Feb 20 & Feb 22
@@ -133,7 +130,6 @@ There is a no-credit online option, as well.
         + [Felsenstein 1988](http://www.annualreviews.org/doi/abs/10.1146/annurev.es.19.110188.002305?journalCode=ecolsys.1): Biology behind the model.
         + [O'Meara, 2012](https://doi.org/10.1146/annurev-ecolsys-110411-160331): Not nearly as important as the ones above, but an intro to models that shows how I think.
         + [Course Book](https://bookdown.org/bomeara/comparative-methods/brownian-motion-and-correlations.html)
-    + [Exercise](https://github.com/bomeara/phylometh/tree/master/exercises/continuous)
 
 
 * Week 8, Feb 27 & Mar 1
@@ -143,7 +139,6 @@ There is a no-credit online option, as well.
         + [Felsenstein, 1985](http://dx.doi.org/10.1086/284325): Independent contrasts
         + [Pagel, 1994](http://dx.doi.org/10.1098/rspb.1994.0006): Pagel 94 correlation
         + [Maddison & FitzJohn, 2015](https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syu070): A big problem with correlation (and other issues)
-    + [Exercise](https://github.com/bomeara/phylometh/tree/master/exercises/correlations)
 
 
 * Week 9, Mar 6 & Mar 8
@@ -161,7 +156,6 @@ There is a no-credit online option, as well.
         + [Maddison, FitzJohn, and Otto, 2007](https://doi.org/10.1080/10635150701607033): The BiSSE paper. Download it as a PDF: the equations do not render in the HTML.
         + [Maddison & FitzJohn, 2015](https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syu070): Already read it, but reread for this week.
         + [Beaulieu & O'Meara, 2016](https://doi.org/10.1093/sysbio/syw022): A hidden state version of the BiSSE model.
-    + [Exercise](https://github.com/bomeara/phylometh/tree/master/exercises/diversification/exercises/diversification/diversification_exercise.Rmd)
 
 
 * Week 11, Mar 27 & Mar 29
@@ -181,3 +175,9 @@ There is a no-credit online option, as well.
     + Topic: Student choice
 
 **Course made possible by**:  NSF CAREER grant to O'Meara & ongoing support from the Department of Ecology & Evolutionary Biology, U. of Tennessee, Knoxville.
+
+My goal is to have you learn. If you are having trouble with something in the course, or if there is a topic you just have to learn more about, let me know (email, office hours, online forum, etc.). Faculty often use evaluations at the end of the semester to get info from students so we can improve before the next class, but this does not help you directly. To allow the class to improve while you are taking it, I have created a site for anonymous feedback at http://brianomeara.info/teaching/feedback/ (and yes, it is really anonymous). Let me know things that are going well or poorly — both are important. I might not implement all your suggestions, but they will all be read and considered, generally the same day you submit them.
+
+Any student who feels s/he may need an accommodation based on the impact of a disability should contact me privately to discuss specific needs.  Please contact the Office of Disability Services at 865-974-6087 in Dunford Hall to coordinate reasonable accommodations for students with documented disabilities.
+
+All relevant University policies (including, but not limited to, policies on academic integrity, attendance, etc.) apply to this course. In the case of any conflict between the policies in this syllabus and University policy, University policy applies. The instructor reserves the right to revise, alter, and/or amend this syllabus as necessary. Students will be notified by email of any such revisions, alterations, and/or amendments.
