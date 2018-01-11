@@ -14,7 +14,7 @@ By the end of this week, you will have:
 * Ability to do the first assignment
 * Ability to talk to classmates
 
-Things I want you do are **in bold**.
+Things I want you do are **in bold**
 
 In this class we'll be using a variety of programs and technologies. Most are open source: "software that can be freely used, changed, and shared (in modified or unmodified form) by anyone" https://opensource.org. For science, open source software is important: we build on the work of others in making discoveries, and open software allows others to build on it in the same way. It also aids transparency and reproducibility: you can go deep into code to see what is being done, and even if a developer stops supporting software, someone else can take it over and maintain it.
 
