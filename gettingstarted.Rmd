@@ -22,8 +22,6 @@ Every student needs a [GitHub](http://github.com) account so we can all use git 
 
 **Go to [GitHub](http://github.com) now and get an account.**
 
-Once you have an account, **go to https://gitter.im/bomeara/phylometh**. Gitter is a free service that allows for group chats (think of something like Skype chatting). I have made a public group for the course: anyone can join or read the texts. You can download various apps for Gitter for your laptop or phone: https://gitter.im/apps.
-
 You will need a variety of software: **right now, R and git**; eventually, things like RevBayes, BEAST, and more.
 
 On a Mac, it is easiest to first install homebrew (will help a lot with later steps): see [here](http://brew.sh) for how to do that. Then install git. For Linux, you probably already know how to use a package manager. For Windows, there is a git installer, but you might consider something like cygwin as well.
@@ -35,14 +33,14 @@ Once R is installed, it's time to install packages. Most packages are on CRAN, t
 One helpful way to navigate the array of R packages is through [task views](https://cran.r-project.org/web/views/): curated lists of packages. You can also **install all the packages in a view** and those they depend on. Do this:
 
 ```
-#install.packages("ctv") #the CRAN task view package
+install.packages("ctv") #the CRAN task view package
 ```
 
 And then choose the packages to install. For this class, I'd suggest Phylogenetics and WebTechnologies:
 
 ```
 library(ctv) #to load the package
-#install.views(c("Phylogenetics", "WebTechnologies"))
+install.views(c("Phylogenetics", "WebTechnologies"))
 ```
 
 We will be using unit testing to check homework. For this, you will need to install the `testthat` package.
@@ -56,7 +54,7 @@ Bioconductor is a separate repository with lots of packages for dealing with gen
 ```
 source("http://bioconductor.org/biocLite.R")
 biocLite()
-#biocLite("Biostrings")
+biocLite("Biostrings")
 ```
 
 I would suggest using RStudio for writing R and handling markdown (see below). It is free and open source; you can install it from [here](https://www.rstudio.com/products/RStudio/).
@@ -69,7 +67,7 @@ We are going to adopt a programming approach that has you write functions in one
 
 Your assignment has three parts:
 
-1. Using github, **fork**  https://github.com/bomeara/phylometh. Then **clone** it. Your clone is how you will do homework: you will change things, commit them, and then try doing a pull request. I will review your pull requests to give you feedback on the homework.
+1. Using github, **fork**  https://github.com/bomeara/phylomethinfo. Then **clone** it. Your clone is how you will do homework: you will change things, commit them, and then try doing a pull request. I will review your pull requests to give you feedback on the homework.
 2. Figure out how to write R markdown by modifying this file as indicated below.
 3. Fix the functions in `gettingstarted_exercise.R`
 
