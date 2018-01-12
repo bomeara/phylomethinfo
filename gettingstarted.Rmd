@@ -87,7 +87,7 @@ Look at the Markdown Cheatsheet [PDF](https://www.rstudio.com/wp-content/uploads
 
 Take the following lines and do what they say.
 
-MAKE THIS LINE BOLD
+**MAKE THIS LINE BOLD**
 
 MAKE THE WORD ITALIC ITALICIZED
 
