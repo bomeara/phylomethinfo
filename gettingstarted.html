@@ -242,7 +242,9 @@ $(document).ready(function () {
 </div>
 
 
-<p>##Objectives By the end of this week, you will have:</p>
+<div id="objectives" class="section level2">
+<h2>Objectives</h2>
+<p>By the end of this week, you will have:</p>
 <ul>
 <li>All required tools installed</li>
 <li>Rudimentary understanding of
@@ -274,16 +276,17 @@ biocLite()
 biocLite(&quot;Biostrings&quot;)</code></pre>
 <p>I would suggest using RStudio for writing R and handling markdown (see below). It is free and open source; you can install it from <a href="https://www.rstudio.com/products/RStudio/">here</a>.</p>
 <p>Once you have all this done, it is time to start the exercise.</p>
-<section id="exercise" class="level2">
+</div>
+<div id="exercise" class="section level2">
 <h2>Exercise</h2>
 <p>We are going to adopt a programming approach that has you write functions in one file, then run analyses in an R markdown document. This very document is an R markdown doc, actually. Markdown is like a very lightweight alternative to html that is far more readable. Rather than writing <code>&lt;b&gt;this&lt;/b&gt;</code> to make <strong>bold</strong> text, you can instead write <code>**this**</code>. “So what?” was my first thought, but it turns out it does make a lot of things easier. R markdown lets you embed R calls within a document and so intersperse text and code very naturally. It can embed figures, too. In fact, the book for the course is written in R markdown.</p>
 <p>Your assignment has three parts:</p>
-<ol type="1">
+<ol style="list-style-type: decimal">
 <li>Using github, <strong>fork</strong> <a href="https://github.com/bomeara/phylomethinfo" class="uri">https://github.com/bomeara/phylomethinfo</a>. Then <strong>clone</strong> it. Your clone is how you will do homework: you will change things, commit them, and then try doing a pull request. I will review your pull requests to give you feedback on the homework.</li>
 <li>Figure out how to write R markdown by modifying this file as indicated below.</li>
 <li>Fix the functions in <code>gettingstarted_exercise.R</code></li>
 </ol>
-<section id="r-markdown-exercise" class="level3">
+<div id="r-markdown-exercise" class="section level3">
 <h3>R Markdown Exercise</h3>
 <p>R calls in R markdown go within sections delimited by three backticks (`, the character just to the left of the 1 on US English keyboards; YMMV on other keyboards). For R code to execute, you must include {r} after the first three. Look in the raw file here at the section below:</p>
 <pre class="r"><code>2+3</code></pre>
@@ -294,19 +297,17 @@ plot(rcoal(5))</code></pre>
 <p>Look at the Markdown Cheatsheet <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">PDF</a> for more info.</p>
 <p><em>To do</em></p>
 <p>Take the following lines and do what they say.</p>
-<p>MAKE THIS LINE BOLD</p>
-<p>MAKE THE WORD ITALIC ITALICIZED</p>
+<p><strong>MAKE THIS LINE BOLD</strong></p>
+<p><em>MAKE THE WORD ITALIC ITALICIZED</em></p>
 <p>MAKE THE FOLLOWING R CODE CREATE A PLOT IN THIS DOCUMENT</p>
-<p>plot(density(rnorm(1000)))</p>
-</section>
-<section id="r-exercise" class="level3">
-<h3>R exercise</h3>
+<pre class="r"><code>plot(density(rnorm(1000)))</code></pre>
+<p><img src="gettingstarted_files/figure-html/unnamed-chunk-2-1.png" width="672" /> ### R exercise</p>
 <p>Edit this document so that this code all runs properly. You will need to change <code>eval=FALSE</code> to <code>eval=TRUE</code> within the curly brackets, then do <code>rmarkdown::render(&quot;gettingstarted.Rmd&quot;)</code>.</p>
 <pre class="r"><code># Some basic tests to make sure things are running.
 
 GetHowManyTrees &lt;- function(ntaxa=10) {
     #ape can compute this for us.
-    result &lt;- ___SOME FUNCTION WITH AN ARGUMENT_____
+    result &lt;- ape::howmanytrees(n=ntaxa)
     return(result)
 }
 
@@ -315,11 +316,32 @@ GetAlignment &lt;- function() {
     library(ape)
     print(system(&quot;which mafft&quot;))
     data(woodmouse)
-    result &lt;- ips::mafft(____SOME INPUT ARGUMENT____)
+    result &lt;- ips::mafft(woodmouse)
     return(result)
-}</code></pre>
-</section>
-</section>
+}
+
+GetHowManyTrees()</code></pre>
+<pre><code>## [1] 34459425</code></pre>
+<pre class="r"><code>GetAlignment()</code></pre>
+<pre><code>## [1] 0</code></pre>
+<pre><code>## 15 DNA sequences in binary format stored in a matrix.
+## 
+## All sequences of same length: 965 
+## 
+## Labels:
+## No305
+## No304
+## No306
+## No0906S
+## No0908S
+## No0909S
+## ...
+## 
+## Base composition:
+##     a     c     g     t 
+## 0.307 0.261 0.126 0.306</code></pre>
+</div>
+</div>
 
 
 
