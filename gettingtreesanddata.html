@@ -247,7 +247,7 @@ $(document).ready(function () {
 <p>Let’s get some trees from Open Tree of Life. This is in some ways a successor to TreeBASE: another repository of trees (though it has only partial overlap with the trees in TreeBASE (or in another repository, Dryad). Unlike TreeBASE, anyone, not just the author, can add trees to Open Tree’s repository. Another important distinction is that Open Tree seeks to create a single tree for all life by creating essentially a supreme super tree.</p>
 <p>First, let’s install the <code>yearn</code> package. It makes it easier to use packages in teaching – if you have a package, it loads it; otherwise, it installs it. For work in general you want to just make sure you have packages installed. There’s also a growing movement to store packages locally at fixed versions; see the <code>packrat</code> package and related.</p>
 <pre class="r"><code>install.packages(&quot;yearn&quot;)</code></pre>
-<pre><code>## Installing package into &#39;/usr/local/lib/R/3.4/site-library&#39;
+<pre><code>## Installing package into &#39;/Users/bomeara/Library/R/3.4/library&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <p>Now let’s get a tree, replacing the <code>eval=FALSE</code> with <code>eval=TRUE</code> and replacing the missing info.</p>
 <pre class="r"><code>GetTreeFromOpenTree &lt;- function() {
