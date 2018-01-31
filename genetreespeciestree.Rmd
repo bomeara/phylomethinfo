@@ -22,6 +22,7 @@ First, get a tree from Open Tree of Life. We'll get a recent plant tree from Bea
 ```{r, warning=FALSE, message=FALSE}
 library(rotl)
 library(ape)
+print("I am working")
 phy <- get_study_tree("ot_485", "tree1")
 plot(phy, cex=0.3)
 ```
