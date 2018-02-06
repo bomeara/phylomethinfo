@@ -52,7 +52,7 @@ These projects should be able to serve as the core for a dissertation chapter or
 The class is generally flipped: rather than me droning at the front of the room, I'll be releasing videos online for you to watch. They will be linked to from this syllabus. In class, talk about what was not clear from the videos about methods, and we'll dig into that. We can also work on problematic parts of the exercises (you should do most of them before class) and talk about papers.
 
 #### Online option
-There is a no-credit online option, as well. 
+There is a no-credit online option, as well.
 
 ### Schedule
 
@@ -95,8 +95,10 @@ There is a no-credit online option, as well.
         + [Heled & Drummond 2009](https://doi.org/10.1093/molbev/msp274): A method for inferring species trees given gene trees inside them
         + [Degnan & Rosenberg 2000](http://dx.doi.org/10.1016/j.tree.2009.01.009): Cases where the most frequent gene tree does not match the species tree
         + [Solís-Lemus & Cécile Ané, 2016](http://dx.doi.org/10.1371/journal.pgen.1005896): Phylogenetic networks. A bit mathy for many students in this class, but worth introducing quartets, reticulation, and an existing method.
+        + [Hahn & Nakhleh 2016](http://www.indiana.edu/~hahnlab/Publications/HahnNakhleh2016.pdf): Irrational exuberance for resolved species
+trees. Mind-blowing (to me) paper on why to understand trait evolution we may care about the gene trees, not the species tree.
     + Class exercise: [R Markdown](https://raw.githubusercontent.com/bomeara/ComparativeMethodsInR/master/95_GeneTreeSpeciesTree.Rmd)
-    
+
 
 * Week 5, Feb 6 & Feb 8
     + Topic: Dating trees
@@ -109,7 +111,7 @@ There is a no-credit online option, as well.
         + [Heath et al. 2015](http://www.pnas.org/content/111/29/E2957.short): Using fossils as tips.
         + [Course book](https://bookdown.org/bomeara/comparative-methods/dating.html)
     + Exercise
-        + [RevBayes](http://revbayes.github.io/tutorials.html) tutorials on dating. 
+        + [RevBayes](http://revbayes.github.io/tutorials.html) tutorials on dating.
 
 * Week 6, Feb 13 & Feb 15
     + Topic: Discrete character models
@@ -161,7 +163,7 @@ There is a no-credit online option, as well.
 * Week 11, Mar 27 & Mar 29
     + Topic: Simulating data
     + Items: TreeSim, geiger
-    
+
 * Week 12, Apr 3 & Apr 5
     + Topic: Building a new comparative method
 
