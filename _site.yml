@@ -18,7 +18,7 @@ navbar:
     - text: Dating Trees
    #   href: datingtrees.html
     - text: Discrete Traits
-    #  href: discrete.html
+      href: https://github.com/bomeara/phylometh_discrete
     - text: Continuous Traits
      # href: continuous.html
     - text: Diversification
