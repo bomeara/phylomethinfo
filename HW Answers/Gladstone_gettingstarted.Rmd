@@ -93,18 +93,14 @@ Take the following lines and do what they say.
 
 MAKE THE FOLLOWING R CODE CREATE A PLOT IN THIS DOCUMENT
 
-```{r eval=TRUE}
-plot(density(rnorm(1000)))
-
-```
-
+```{r eval=TRUE} plot(density(rnorm(1000)))```
 
 ### R exercise
 
 Edit this document so that this code all runs properly. You will need to change `eval=FALSE` to `eval=TRUE` within the curly brackets, then do ```rmarkdown::render("gettingstarted.Rmd")```.
 
 
-```{r eval=FALSE}
+```{r eval=TRUE}
 # Some basic tests to make sure things are running.
 
 GetHowManyTrees <- function(ntaxa=10) {
