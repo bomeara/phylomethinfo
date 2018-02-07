@@ -12,7 +12,7 @@ navbar:
     - text: Getting Started
       href: gettingstarted.html
     - text: Stealing Trees And Data
-      href: gettingtreesanddata.html
+      href: https://github.com/bomeara/phylometh_gettingtreesanddata
     - text: Building Trees
    #   href: buildingtrees.html
     - text: Dating Trees
@@ -20,7 +20,7 @@ navbar:
     - text: Discrete Traits
       href: https://github.com/bomeara/phylometh_discrete
     - text: Continuous Traits
-     # href: continuous.html
+      href: https://github.com/bomeara/phylometh_continuous
     - text: Diversification
     #  href: diversification.html
     - text: Simulation
