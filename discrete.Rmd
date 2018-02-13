@@ -1,8 +1,8 @@
 ---
 title: "DiscreteCharacters"
 author: "Brian O'Meara"
-date: "2/16/2017"
-output: html_document
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
 ---
 
 For this exercise, explore looking at discrete character models. Note: they are not "discreet" character models -- they're actually pretty noisy.
@@ -20,11 +20,12 @@ change `eval=TRUE` for all the R blocks, debug, commit, and do a pull request.
 These are useful packages in this area (far from exhaustive list).
 
 ```{r, eval=TRUE}
-library(ape)
-library(geiger)
-library(phytools)
-library(phangorn)
-library(corHMM)
+library(yearn)
+yearn::yearn(ape)
+yearn::yearn(geiger)
+yearn::yearn(phytools)
+yearn::yearn(phangorn)
+yearn::yearn(corHMM)
 ```
 
 You'll need to get data into R in some way. 

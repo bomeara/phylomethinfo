@@ -195,12 +195,16 @@ $(document).ready(function () {
       <a href="gettingstarted.html">Getting Started</a>
     </li>
     <li>
-      <a href="gettingtreesanddata.html">Stealing Trees And Data</a>
+      <a href="https://github.com/bomeara/phylometh_gettingtreesanddata">Stealing Trees And Data</a>
     </li>
     <li class="dropdown-header">Building Trees</li>
     <li class="dropdown-header">Dating Trees</li>
-    <li class="dropdown-header">Discrete Traits</li>
-    <li class="dropdown-header">Continuous Traits</li>
+    <li>
+      <a href="https://github.com/bomeara/phylometh_discrete">Discrete Traits</a>
+    </li>
+    <li>
+      <a href="https://github.com/bomeara/phylometh_continuous">Continuous Traits</a>
+    </li>
     <li class="dropdown-header">Diversification</li>
     <li class="dropdown-header">Simulation</li>
   </ul>
@@ -240,7 +244,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">DiscreteCharacters</h1>
 <h4 class="author"><em>Brian O’Meara</em></h4>
-<h4 class="date"><em>2/16/2017</em></h4>
+<h4 class="date"><em>12 February, 2018</em></h4>
 
 </div>
 
@@ -252,13 +256,12 @@ $(document).ready(function () {
 <p><code>git pull upstream master</code> pulls from upstream (me).</p>
 <p>change <code>eval=TRUE</code> for all the R blocks, debug, commit, and do a pull request.</p>
 <p>These are useful packages in this area (far from exhaustive list).</p>
-<pre class="r"><code>library(ape)
-library(geiger)
-library(phytools)</code></pre>
-<pre><code>## Loading required package: maps</code></pre>
-<pre class="r"><code>library(phangorn)
-library(corHMM)</code></pre>
-<pre><code>## Loading required package: GenSA</code></pre>
+<pre class="r"><code>library(yearn)
+yearn::yearn(ape)
+yearn::yearn(geiger)
+yearn::yearn(phytools)
+yearn::yearn(phangorn)
+yearn::yearn(corHMM)</code></pre>
 <p>You’ll need to get data into R in some way.</p>
 <pre class="r"><code>tree &lt;- read.tree(&quot;____PATH_TO_TREE_OR_SOME_OTHER_WAY_OF_GETTING_A_TREE____&quot;)
 discrete.data &lt;- read.csv(file=&quot;____PATH_TO_DATA_OR_SOME_OTHER_WAY_OF_GETTING_TRAITS____&quot;, stringsAsFactors=FALSE) #death to factors.</code></pre>

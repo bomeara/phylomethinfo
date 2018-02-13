@@ -115,12 +115,13 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
 
 * Week 6, Feb 13 & Feb 15
     + Topic: Discrete character models
-    + Items: Pagel 1994, corHMM, geiger
+    + Items: corHMM, geiger
     + Video: [PhyloMeth discrete characters](https://youtu.be/0OWX6WMNQ3o?list=PLrJfyqNDuTkOzbZfsM_xIkNIBjF7zmVP4)
-    + Reading
+    + Reading (all three for Tues)
         + [Pagel, 1999](https://doi.org/10.1080/106351599260184): Ancestral state reconstruction
         + [Lewis, 2001](https://doi.org/10.1080/106351501753462876): MKV model
         + [O'Meara, 2012](https://doi.org/10.1146/annurev-ecolsys-110411-160331): Review of models
+    + Exercise (for Thurs): https://github.com/bomeara/phylometh_discrete
 
 
 * Week 7, Feb 20 & Feb 22
