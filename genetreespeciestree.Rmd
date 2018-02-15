@@ -12,7 +12,7 @@ First, we will be looking at distinctions between gene trees and species trees. 
 
 ```
 library(devtools)
-#install_github("bomeara/phybase")
+install_github("bomeara/phybase")
 ```
 
 For real science, Liang's is the canonical one (and definitely cite his) but this will be easier for us to use for class.
@@ -22,7 +22,6 @@ First, get a tree from Open Tree of Life. We'll get a recent plant tree from Bea
 ```{r, warning=FALSE, message=FALSE}
 library(rotl)
 library(ape)
-print("I am working")
 phy <- get_study_tree("ot_485", "tree1")
 plot(phy, cex=0.3)
 ```

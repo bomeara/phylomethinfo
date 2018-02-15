@@ -1,8 +1,8 @@
 ---
 title: "DiscreteCharacters"
-author: "Brian O'Meara"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: pdf_document
+author: "Erika Moore"
+date: "2/16/2017"
+output: html_document
 ---
 
 For this exercise, explore looking at discrete character models. Note: they are not "discreet" character models -- they're actually pretty noisy.
@@ -20,27 +20,39 @@ change `eval=TRUE` for all the R blocks, debug, commit, and do a pull request.
 These are useful packages in this area (far from exhaustive list).
 
 ```{r, eval=TRUE}
-library(yearn)
-yearn::yearn(ape)
-yearn::yearn(geiger)
-yearn::yearn(phytools)
-yearn::yearn(phangorn)
-yearn::yearn(corHMM)
+library(ape)
+library(geiger)
+library(phytools)
+library(phangorn)
+library(corHMM)
 ```
 
 You'll need to get data into R in some way. 
 
-```{r, eval=FALSE}
-tree <- read.tree("____PATH_TO_TREE_OR_SOME_OTHER_WAY_OF_GETTING_A_TREE____")
-discrete.data <- read.csv(file="____PATH_TO_DATA_OR_SOME_OTHER_WAY_OF_GETTING_TRAITS____", stringsAsFactors=FALSE) #death to factors.
+```{r, eval=TRUE}
+library(rotl)
+tree <- rotl::get_study_tree(study_id="ot_859", tree_id=rotl::get_tree_ids(rotl::get_study_meta("ot_859")))
+discrete.data <- read.csv(file="C:/Users/Erika/Documents/phylomethinfo/phylometh_discrete/GlobalWoodinessDatabase.csv", stringsAsFactors=FALSE) #death to factors.
 ```
 
 Data are often not right in some way. They might not match the taxa in your tree, there may be missing data, etc. `geiger::treedata` is a great function for getting a tree and data that match, but your data may need other cleaning. Do it as a function so it's repeatable.
 
-```{r, eval=FALSE}
-CleanData <- function(phy, data) {
-	#treedata() in Geiger is probably my favorite function in R.
-}
+```{r, eval=TRUE}
+  library(taxize)
+  gnr.data <- gnr_datasources()
+  gnr.source <- gnr.data[gnr.data$title=="NCBI", "id"]
+  new.tree.names <- taxize::gnr_resolve(tree$tip.label, data_source=gnr.source, best_match_only =TRUE)$matched_name
+ # print(cbind(tree$tip.label, new.tree.names))
+  tree$tip.label <- new.tree.names
+  library(geiger)
+  data.names <- discrete.data$gs
+  actual.data <- data.frame(woodiness=discrete.data[, "woodiness"], stringsAsFactors = FALSE)
+  rownames(actual.data) <- data.names
+ 
+  cleaned.result<- treedata(phy=tree,data=actual.data,sort=TRUE)
+  cleaned.tree <- cleaned.result$phy
+  cleaned.data <- cleaned.result$data
+  	#treedata() in Geiger is probably my favorite function in R
 
 # Now write the code to use CleanData() to actually clean your data
 
@@ -48,38 +60,41 @@ CleanData <- function(phy, data) {
 
 It's critically important to LOOK at what you have. Are there weird values? Has the match between taxa and state gone correctly? Do you think you have binary data, but there's actually only state 1? Especially as data sets grow (yay), and are assembled using scripts rather than by error-prone, non-reproducable hands (double yay), scientists are increasingly less likely to deeply look at our data. That's bad -- don't be that person.
 
-```{r, eval=FALSE}
-VisualizeData <- function(phy, data) {
+```{r, eval=TRUE}
+plot(cleaned.tree)
+print(t(t(table(cleaned.data))))
 	#Important here is to LOOK at your data before running it. Any weird values? Does it all make sense? What about your tree? Polytomies?
     
     # Now write the code to use VisualizeData() to actually look at your data
 
-}
+
 ```
 
 First, let's use parsimony to look at ancestral states:
 
-```{r, eval=FALSE}
-cleaned.discrete.phyDat <- phangorn::phyDat(cleaned.discrete, type="______________") #phyDat is a data format used by phangorn
-anc.p <- phangorn::ancestral.pars(tree, cleaned.discrete.phyDat)
-plotAnc(tree, anc.p, 1)
+```{r, eval=TRUE}
+cleaned.discrete.phyDat <- phangorn::phyDat(cleaned.data, type="DNA") #phyDat is a data format used by phangorn
+anc.p <- phangorn::ancestral.pars(cleaned.tree, cleaned.discrete.phyDat)
+plotAnc(cleaned.tree, anc.p, 1)
 ```
 
 Do you see uncertainty? What does it mean?
 
 Now, plot the likelihood estimates. 
 
-```{r, eval=FALSE}
-anc.ml <- ancestral.pml(pml(tree, cleaned.discrete.phyDat), type="ml")
-plotAnc(tree, anc.ml, 1)
+```{r, eval=TRUE}
+anc.ml <- ancestral.pml(pml(cleaned.tree, cleaned.discrete.phyDat), type="ml")
+plotAnc(cleaned.tree, anc.ml, 1)
 ```
-
+## Parsimony - the best hypothesis is the one that requires the fewest evolutionary changes
 How does this differ from parsimony? 
-
+- likelihood differs from parsimony since it accounts for all changes compared to the few changes seen with parsimony
 Why does it differ from parsimony?
-
+- Because parismony accounts for the hypothesis with the fewest evolutionary changes, and likelihood is the probability of all data
 What does uncertainty mean?
+- Uncertainty is the possible error that could occur, excluding lack of data
 
+**I DON'T KNOW HOW TO DO THIS**
 Now, to the biological questions. For many of these, `corHMM` will be a useful package.
 
 1. How can you estimate transition rates between states? Do it.
