@@ -12,7 +12,7 @@ First, we will be looking at distinctions between gene trees and species trees. 
 
 ```
 library(devtools)
-#install_github("bomeara/phybase")
+install_github("bomeara/phybase")
 ```
 
 For real science, Liang's is the canonical one (and definitely cite his) but this will be easier for us to use for class.
