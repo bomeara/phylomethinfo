@@ -21,6 +21,8 @@ navbar:
       href: https://github.com/bomeara/phylometh_discrete
     - text: Continuous Traits
       href: https://github.com/bomeara/phylometh_continuous
+    - text: Correlated Traits
+      href: https://github.com/bomeara/phylometh_correlated
     - text: Diversification
     #  href: diversification.html
     - text: Simulation
