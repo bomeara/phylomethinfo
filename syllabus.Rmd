@@ -151,6 +151,8 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Reading
       + [Ronquist and Sanmartin, 2011](http://www.annualreviews.org/doi/abs/10.1146/annurev-ecolsys-102209-144710)
       + [Ree and Smith, 2008](https://academic.oup.com/sysbio/article/57/1/4/1703014/Maximum-Likelihood-Inference-of-Geographic-Range)
+    + Exercise: None this week, but continue working on past ones.
+
      
 
 
