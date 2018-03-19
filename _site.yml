@@ -24,7 +24,7 @@ navbar:
     - text: Correlated Traits
       href: https://github.com/bomeara/phylometh_correlated
     - text: Diversification
-    #  href: diversification.html
+      href: https://github.com/bomeara/phylometh_diversification
     - text: Simulation
      # href: simulation.hml
   - text: Videos

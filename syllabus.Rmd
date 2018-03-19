@@ -163,6 +163,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
         + [Maddison, FitzJohn, and Otto, 2007](https://doi.org/10.1080/10635150701607033): The BiSSE paper. Download it as a PDF: the equations do not render in the HTML.
         + [Maddison & FitzJohn, 2015](https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syu070): Already read it, but reread for this week.
         + [Beaulieu & O'Meara, 2016](https://doi.org/10.1093/sysbio/syw022): A hidden state version of the BiSSE model.
+    + Exercise: https://github.com/bomeara/phylometh_diversification
 
 
 * Week 11, Mar 27 & Mar 29
