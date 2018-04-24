@@ -178,9 +178,11 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
 
 * Week 14, Apr 17 & Apr 19
     + Topic: Student choice
+    + Exercise: make an R package based on the NSF API.
 
-* Week 11, Aprl 24 & Aprl 26
+* Week 11, Aprl 24 & April 26
     + Topic: Student choice
+    + Exercise: Mixed data types. https://github.com/bomeara/phylometh_mixed.
 
 **Course made possible by**:  NSF CAREER grant to O'Meara & ongoing support from the Department of Ecology & Evolutionary Biology, U. of Tennessee, Knoxville.
 
