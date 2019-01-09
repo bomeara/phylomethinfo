@@ -35,7 +35,7 @@ This is a modern class in phylogenetic methods. You will learn how to get data, 
 * R
 * And other software we'll learn about during the course
 
-I am writing a textbook as part of the course
+I am revising a textbook as part of the course
 * [HTML version](https://bookdown.org/bomeara/comparative-methods/)
 * [PDF](https://bookdown.org/bomeara/comparative-methods/comparative-methods.pdf)
 
@@ -48,6 +48,12 @@ These projects should be able to serve as the core for a dissertation chapter or
 
 #### Teaching
 The class is generally flipped: rather than me droning at the front of the room, I'll be releasing videos online for you to watch. They will be linked to from this syllabus. In class, talk about what was not clear from the videos about methods, and we'll dig into that. We can also work on problematic parts of the exercises (you should do most of them before class) and talk about papers.
+
+#### Connecting
+
+We will meet via Zoom. The class meets 11:10 am - 12:25 pm US Eastern time. You can download a calendar files of meeting times [here](https://tennessee.zoom.us/meeting/946522241/ics?icsToken=261f8071e9dfcf3384ab995c88f5bfaa8ec029c0e926ca7747c7cbe490136e22) (note I have the times so the meeting starts 40 minutes after class officially starts so you can join early). You can join the meeting at https://tennessee.zoom.us/j/946522241 (it will have you download the free Zoom app). You can call in ([phone numbers for various countries](https://zoom.us/u/adNNl8oCNK); the meeting id is `946 522 241`.
+
+The class discussion board is public on Slack; you will need the [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTg0ZDQ2NTdjMjg1ZWIxZjMzNTg4MDQ0ZmU2MmFiMTY1YTNlZDcyNTg2MjBkZGY4MGQ2MWM0MDkyZGQ2MDRmMWY) to join.
 
 #### Online option
 There is a no-credit online option, as well.
