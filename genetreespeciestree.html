@@ -11,7 +11,7 @@
 
 
 
-<title>genetreespeciestree.utf8</title>
+<title>genetreespeciestree.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -89,6 +89,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -262,7 +265,7 @@ $(document).ready(function () {
 </ul>
 <p>First, we will be looking at distinctions between gene trees and species trees. For this, we’ll be using Liang Liu’s phybase package. This isn’t on CRAN, but it is available on his <a href="https://faculty.franklin.uga.edu/lliu/content/phybase?">website</a>. However, we’ll be using a version I modified slightly and put on github. Liang’s package uses <a href="http://evolution.genetics.washington.edu/phylip/newicktree.html">newick</a> format (yes, named after the <a href="http://newicks.com">restaurant</a>), but with additional options for including population size (branch width, included as a <code>#</code> sign followed by a number) as well as the more traditional branch length. Both matter for coalescence: two copies are much more likely to have coalesced on a long, narrow branch than a short, fat one. Most packages in R instead use ape’s <code>phylo</code> format, so I wrote a few functions to deal with that. This version of the package is on github; to install it:</p>
 <pre><code>library(devtools)
-#install_github(&quot;bomeara/phybase&quot;)</code></pre>
+install_github(&quot;bomeara/phybase&quot;)</code></pre>
 <p>For real science, Liang’s is the canonical one (and definitely cite his) but this will be easier for us to use for class.</p>
 <p>First, get a tree from Open Tree of Life. We’ll get a recent plant tree from Beaulieu et al:</p>
 <pre class="r"><code>library(rotl)
@@ -278,7 +281,7 @@ axisPhylo()</code></pre>
 <p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>We can simulate gene trees on this tree:</p>
 <pre class="r"><code>library(phybase)
-gene.tree &lt;- sim.coaltree.phylo(phy, pop.size=1e-12)
+gene.tree &lt;- phybase::sim.coaltree.phylo(phy, pop.size=1e-12)
 plot(gene.tree)</code></pre>
 <p><img src="genetreespeciestree_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>And it probably looks very similar to the initial tree:</p>
@@ -292,7 +295,7 @@ plot(cophylo(phy, gene.tree, cbind(sort(phy$tip.label), sort(gene.tree$tip.label
 <p>Well, it depends on the details of the tree. One common misconception is that gene tree species tree issues only relate to trees for recent events. This problem can happen any time there are short, fat branches, where lack of coalescence of copies can occur.</p>
 <pre class="r"><code>species.tree &lt;- rcoal(7)
 species.tree$edge.length &lt;- species.tree$edge.length / (10*max(branching.times(species.tree)))
-gene.tree &lt;- sim.coaltree.phylo(species.tree)
+gene.tree &lt;- phybase::sim.coaltree.phylo(species.tree)
 plot(cophylo(species.tree, gene.tree, cbind(sort(species.tree$tip.label), sort(gene.tree$tip.label))))</code></pre>
 <pre><code>## Rotating nodes to optimize matching...
 ## Done.</code></pre>
@@ -301,7 +304,7 @@ plot(cophylo(species.tree, gene.tree, cbind(sort(species.tree$tip.label), sort(g
 <pre class="r"><code>tip.rows &lt;- which(species.tree$edge[,2]&lt;=Ntip(species.tree))
 species.tree2 &lt;- species.tree
 species.tree2$edge.length[tip.rows] &lt;- 100 + species.tree2$edge.length[tip.rows]
-gene.tree2 &lt;- sim.coaltree.phylo(species.tree2)
+gene.tree2 &lt;- phybase::sim.coaltree.phylo(species.tree2)
 plot(cophylo(species.tree2, gene.tree2, cbind(sort(species.tree2$tip.label), sort(gene.tree2$tip.label))))</code></pre>
 <pre><code>## Rotating nodes to optimize matching...
 ## Done.</code></pre>

@@ -12,7 +12,7 @@ First, we will be looking at distinctions between gene trees and species trees. 
 
 ```
 library(devtools)
-#install_github("bomeara/phybase")
+install_github("bomeara/phybase")
 ```
 
 For real science, Liang's is the canonical one (and definitely cite his) but this will be easier for us to use for class.
@@ -39,7 +39,7 @@ axisPhylo()
 We can simulate gene trees on this tree:
 ```{r, warning=FALSE, message=FALSE}
 library(phybase)
-gene.tree <- sim.coaltree.phylo(phy, pop.size=1e-12)
+gene.tree <- phybase::sim.coaltree.phylo(phy, pop.size=1e-12)
 plot(gene.tree)
 ```
 
@@ -60,7 +60,7 @@ Well, it depends on the details of the tree. One common misconception is that ge
 ```{r, warning=FALSE, message=FALSE}
 species.tree <- rcoal(7)
 species.tree$edge.length <- species.tree$edge.length / (10*max(branching.times(species.tree)))
-gene.tree <- sim.coaltree.phylo(species.tree)
+gene.tree <- phybase::sim.coaltree.phylo(species.tree)
 plot(cophylo(species.tree, gene.tree, cbind(sort(species.tree$tip.label), sort(gene.tree$tip.label))))
 ```
 
@@ -70,7 +70,7 @@ You should see (in most iterations), the above code giving a mismatch between th
 tip.rows <- which(species.tree$edge[,2]<=Ntip(species.tree))
 species.tree2 <- species.tree
 species.tree2$edge.length[tip.rows] <- 100 + species.tree2$edge.length[tip.rows]
-gene.tree2 <- sim.coaltree.phylo(species.tree2)
+gene.tree2 <- phybase::sim.coaltree.phylo(species.tree2)
 plot(cophylo(species.tree2, gene.tree2, cbind(sort(species.tree2$tip.label), sort(gene.tree2$tip.label))))
 ```
 

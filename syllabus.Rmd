@@ -7,9 +7,9 @@ output:
   word_document: default
 ---
 
-## Phylogenetic Methods (PhyloMeth). Spring 2018
+## Phylogenetic Methods (PhyloMeth). Spring 2019
 
-UT students may sign up at EEB 603, CRN 30253 (grad students) or EEB 504, CRN 31819 (advanced undergrads)
+UT students may sign up at EEB 587
 
 Syllabus version: `r format(Sys.time(), '%I:%M %p, %d %B, %Y')`
 

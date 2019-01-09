@@ -1,14 +1,14 @@
 ---
-title: "Phylometh 1.2"
+title: "Phylometh 1.3"
 ---
 
 ![](Figure1Revised-1170x500.jpg)
 
-This is a course on Phylogenetic Methods: building and using trees to answer compelling questions. It was taught in Spring 2016 and 2017, and is now being taught again in Spring 2018 (Jan - April). UT Knoxville students may sign up at EEB 603, CRN 30253 (grad students) or EEB 504, CRN 31819 (advanced undergrads). However, I encourage *anyone* to participate. 
+This is a course on Phylogenetic Methods: building and using trees to answer compelling questions. It was taught in Spring 2016, 2017, and 2018, and is now being taught again in Spring 2019 (Jan - April). UT Knoxville students may sign up at EEB 587. However, I encourage *anyone* to participate.
 
-The [syllabus](syllabus.html) has information to support your learning. 
+The [syllabus](syllabus.html) has information to support your learning.
 
-You can join discussions with this [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtMjk3ODcxNTk3MzE4LTkzY2VlNDU0NGQ1NmI1ZjQ0OTY4NDY2Y2RlMTUyNjA5N2IwNjZiYmQ2YjdkYzZhNTQ4YjUzNTIyNzU0YzU5Nzg) (active until Feb. 2018; let me know if you want to join after that).
+You can join discussions with this [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTg0ZDQ2NTdjMjg1ZWIxZjMzNTg4MDQ0ZmU2MmFiMTY1YTNlZDcyNTg2MjBkZGY4MGQ2MWM0MDkyZGQ2MDRmMWY).
 
 The course features instructional videos, exercises, and a textbook. All are still being refined, so check back often.
 
