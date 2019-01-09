@@ -97,7 +97,9 @@ plot(density(rnorm(1000)))
 
 ### R exercise
 
-Edit this document so that this code all runs properly. You will need to change `eval=FALSE` to `eval=TRUE` within the curly brackets, then do ```rmarkdown::render("gettingstarted.Rmd")```.
+Edit this document so that this code all runs properly. You will need to change `eval=FALSE` to `eval=TRUE` within the curly brackets, then do
+
+```rmarkdown::render("gettingstarted.Rmd")```.
 
 
 ```{r eval=FALSE}

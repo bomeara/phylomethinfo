@@ -12,19 +12,19 @@ navbar:
     - text: Getting Started
       href: gettingstarted.html
     - text: Stealing Trees And Data
-      href: https://github.com/bomeara/phylometh_gettingtreesanddata
+      href: gettingtreesanddata.html
     - text: Building Trees
    #   href: buildingtrees.html
     - text: Dating Trees
    #   href: datingtrees.html
     - text: Discrete Traits
-      href: https://github.com/bomeara/phylometh_discrete
+      href: discrete.html
     - text: Continuous Traits
-      href: https://github.com/bomeara/phylometh_continuous
+      href: continuous.html
     - text: Correlated Traits
-      href: https://github.com/bomeara/phylometh_correlated
+      href: correlations.html
     - text: Diversification
-      href: https://github.com/bomeara/phylometh_diversification
+      href: diversification.html
     - text: Simulation
      # href: simulation.hml
   - text: Videos
