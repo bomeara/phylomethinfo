@@ -51,7 +51,7 @@ The class is generally flipped: rather than me droning at the front of the room,
 
 #### Connecting
 
-We will meet via Zoom. The class meets 11:10 am - 12:25 pm US Eastern time. You can download a calendar files of meeting times [here](https://tennessee.zoom.us/meeting/946522241/ics?icsToken=261f8071e9dfcf3384ab995c88f5bfaa8ec029c0e926ca7747c7cbe490136e22) (note I have the times so the meeting starts 40 minutes after class officially starts so you can join early). You can join the meeting at https://tennessee.zoom.us/j/946522241 (it will have you download the free Zoom app). You can call in ([phone numbers for various countries](https://zoom.us/u/adNNl8oCNK); the meeting id is `946 522 241`.
+We will meet via Zoom. The class meets 11:10 am - 12:25 pm US Eastern time. You can download a calendar files of meeting times [here](https://tennessee.zoom.us/meeting/946522241/ics?icsToken=261f8071e9dfcf3384ab995c88f5bfaa8ec029c0e926ca7747c7cbe490136e22) (note I have the times so the meeting starts 40 minutes after class officially starts so you can join early). You can join the meeting at https://tennessee.zoom.us/j/946522241 (it will have you download the free Zoom app). You can call in ([phone numbers for various countries](https://zoom.us/u/adNNl8oCNK)); the meeting id is `946 522 241`.
 
 The class discussion board is public on Slack; you will need the [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTg0ZDQ2NTdjMjg1ZWIxZjMzNTg4MDQ0ZmU2MmFiMTY1YTNlZDcyNTg2MjBkZGY4MGQ2MWM0MDkyZGQ2MDRmMWY) to join.
 
@@ -71,7 +71,7 @@ There is a no-credit online option, as well.
     + Reading: [Chapter 3](https://bookdown.org/bomeara/comparative-methods/getting-data-and-trees-into-r.html) of the textbook.
     + Videos: See videos in this [playlist](https://www.youtube.com/playlist?list=PLrJfyqNDuTkMx_1OV_97S0jgdfmHfQ48x)
     + Items: Sequences, trees, name resolution, alignment
-    + Exercise: Getting trees: https://github.com/bomeara/phylometh/blob/master/exercises/gettingtreesanddata/exercise.R
+    + Exercise: [Getting trees](gettingtrees.html)
     + In class: Discussion of what kinds of data you need for your questions, what kind of trees you need.
 
 * Week 3, Jan 22 & Jan 24
@@ -100,7 +100,7 @@ There is a no-credit online option, as well.
         + [Solís-Lemus & Cécile Ané, 2016](http://dx.doi.org/10.1371/journal.pgen.1005896): Phylogenetic networks. A bit mathy for many students in this class, but worth introducing quartets, reticulation, and an existing method.
         + [Hahn & Nakhleh 2016](http://www.indiana.edu/~hahnlab/Publications/HahnNakhleh2016.pdf): Irrational exuberance for resolved species
 trees. Mind-blowing (to me) paper on why to understand trait evolution we may care about the gene trees, not the species tree.
-    + Class exercise: [R Markdown](https://raw.githubusercontent.com/bomeara/ComparativeMethodsInR/master/95_GeneTreeSpeciesTree.Rmd)
+    + Class exercise: [Gene tree species tree](genetreespeciestree.html)
 
 
 * Week 5, Feb 5 & Feb 7
@@ -124,7 +124,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
         + [Pagel, 1999](https://doi.org/10.1080/106351599260184): Ancestral state reconstruction
         + [Lewis, 2001](https://doi.org/10.1080/106351501753462876): MKV model
         + [O'Meara, 2012](https://doi.org/10.1146/annurev-ecolsys-110411-160331): Review of models
-    + Exercise (for Thurs): https://github.com/bomeara/phylometh_discrete
+    + Exercise (for Thurs): [Discrete data](discrete.html)
 
 
 * Week 7, Feb 19 & Feb 21
@@ -136,7 +136,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
         + [Felsenstein 1988](http://www.annualreviews.org/doi/abs/10.1146/annurev.es.19.110188.002305?journalCode=ecolsys.1): Biology behind the model.
         + [O'Meara, 2012](https://doi.org/10.1146/annurev-ecolsys-110411-160331): Not nearly as important as the ones above, but an intro to models that shows how I think.
         + [Course Book](https://bookdown.org/bomeara/comparative-methods/brownian-motion-and-correlations.html)
-          + Exercise (for Thurs): https://github.com/bomeara/phylometh_continuous
+          + Exercise (for Thurs): [Continuous data](continuous.html)
 
 
 * Week 8, Feb 26 & Feb 28
@@ -146,7 +146,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
         + [Felsenstein, 1985](http://dx.doi.org/10.1086/284325): Independent contrasts
         + [Pagel, 1994](http://dx.doi.org/10.1098/rspb.1994.0006): Pagel 94 correlation
         + [Maddison & FitzJohn, 2015](https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syu070): A big problem with correlation (and other issues)
-    + Exercise (for Thurs): https://github.com/bomeara/phylometh_correlated
+    + Exercise (for Thurs): [Correlations](correlations.html)
 
 
 * Week 9, Mar 5 & Mar 7
@@ -166,7 +166,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
         + [Maddison, FitzJohn, and Otto, 2007](https://doi.org/10.1080/10635150701607033): The BiSSE paper. Download it as a PDF: the equations do not render in the HTML.
         + [Maddison & FitzJohn, 2015](https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syu070): Already read it, but reread for this week.
         + [Beaulieu & O'Meara, 2016](https://doi.org/10.1093/sysbio/syw022): A hidden state version of the BiSSE model.
-    + Exercise: https://github.com/bomeara/phylometh_diversification
+    + Exercise: [Diversification](diversification.html)
 
 * Spring break at UT March 18-22
 
