@@ -9,7 +9,7 @@ output:
 
 ## Phylogenetic Methods (PhyloMeth). Spring 2019
 
-UT students may sign up at EEB 587
+UT students may sign up at EEB 587.
 
 Syllabus version: `r format(Sys.time(), '%I:%M %p, %d %B, %Y')`
 
@@ -17,9 +17,10 @@ Instructor: **[Brian O'Meara](http://www.brianomeara.info)** (bomeara@utk.edu)
 
 Course website: http://phylometh.info
 
-Office Hours (446 Hesler) Tuesdays 12:30 - 1:30 pm and by appointment.
+Office Hours (446 Hesler) by appointment (given few enrolled students this semester, being flexible with time makes sense).
 
-####Anonymous feedback
+#### Anonymous feedback
+
 http://www.brianomeara.info/feedback
 
 #### What you will learn
@@ -57,7 +58,7 @@ There is a no-credit online option, as well.
     + Topic: Getting ready
     + Items: R, github, gitter, unit testing
     + Instructions: http://rpubs.com/bomeara/phylomethsoftwareinstall
-    + Exercise: [Getting Started](https://github.com/bomeara/phylometh/blob/master/exercises/gettingstarted/GettingStarted.Rmd)
+    + Exercise: [Getting Started](gettingstarted.html)
     + One way to do the exercise is to fork the [github repo](https://github.com/bomeara/phylomethinfo), clone it to your computer, start editing documents, then `git commit -m"done homework" -a`, then do a pull request.
 
 * Week 2, Jan 15 & Jan 17
