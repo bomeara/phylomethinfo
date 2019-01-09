@@ -43,9 +43,6 @@ It will be updated as we go, so check back frequently.
 #### Evaluation
 Grading will be based on effort and performance. Some of the things will be harder for some students than others just given differences in what they've been exposed to so far, and I don't want to penalize students who are less skilled at R, for example. But I do require that you put in work on this class: work through the exercises, think about the papers, etc. Much of the homework is chewy, so it will take some thought to get through, and you might not be able to do all of this. That's ok. *But ask for help!*
 
-* EEB603 final project will be done solo (though consulting is ok)
-* EEB504 final project will be done in pairs
-
 These projects should be able to serve as the core for a dissertation chapter or published paper: still requiring more work and writing, but a solid idea with preliminary results.
 
 #### Teaching
@@ -56,14 +53,14 @@ There is a no-credit online option, as well.
 
 ### Schedule
 
-* Week 1, Jan 11
+* Week 1, Jan 10
     + Topic: Getting ready
     + Items: R, github, gitter, unit testing
     + Instructions: http://rpubs.com/bomeara/phylomethsoftwareinstall
     + Exercise: [Getting Started](https://github.com/bomeara/phylometh/blob/master/exercises/gettingstarted/GettingStarted.Rmd)
     + One way to do the exercise is to fork the [github repo](https://github.com/bomeara/phylomethinfo), clone it to your computer, start editing documents, then `git commit -m"done homework" -a`, then do a pull request.
 
-* Week 2, Jan 16
+* Week 2, Jan 15 & Jan 17
     + Topic: Gathering data
     + Reading: [Chapter 3](https://bookdown.org/bomeara/comparative-methods/getting-data-and-trees-into-r.html) of the textbook.
     + Videos: See videos in this [playlist](https://www.youtube.com/playlist?list=PLrJfyqNDuTkMx_1OV_97S0jgdfmHfQ48x)
@@ -71,7 +68,7 @@ There is a no-credit online option, as well.
     + Exercise: Getting trees: https://github.com/bomeara/phylometh/blob/master/exercises/gettingtreesanddata/exercise.R
     + In class: Discussion of what kinds of data you need for your questions, what kind of trees you need.
 
-* Week 3, Jan 23 & Jan 25
+* Week 3, Jan 22 & Jan 24
     + Topic: Building trees
     + Videos: [Terminology](https://www.youtube.com/watch?v=XSp1gEKNuIo), [Tree space](https://www.youtube.com/watch?v=SQw9ZWFp178), [Likelihood vs Bayes](https://youtu.be/xOADfntkBrs)
     + Reading
@@ -87,7 +84,7 @@ There is a no-credit online option, as well.
         + [Cyverse discovery environment](https://de.cyverse.org/de/): Free service (thanks, NSF!) for running phylogenetic (and other) software
 
 
-* Week 4, Jan 30 & Feb 1
+* Week 4, Jan 29 & Jan 31
     + Topic: Building trees
     + Items: Gene tree species tree; Network
     + Reading
@@ -100,7 +97,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Class exercise: [R Markdown](https://raw.githubusercontent.com/bomeara/ComparativeMethodsInR/master/95_GeneTreeSpeciesTree.Rmd)
 
 
-* Week 5, Feb 6 & Feb 8
+* Week 5, Feb 5 & Feb 7
     + Topic: Dating trees
     + Items: Beast, r8s
     + Reading
@@ -113,7 +110,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Exercise
         + [RevBayes](http://revbayes.github.io/tutorials.html) tutorials on dating.
 
-* Week 6, Feb 13 & Feb 15
+* Week 6, Feb 12 & Feb 14
     + Topic: Discrete character models
     + Items: corHMM, geiger
     + Video: [PhyloMeth discrete characters](https://youtu.be/0OWX6WMNQ3o?list=PLrJfyqNDuTkOzbZfsM_xIkNIBjF7zmVP4)
@@ -124,7 +121,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Exercise (for Thurs): https://github.com/bomeara/phylometh_discrete
 
 
-* Week 7, Feb 20 & Feb 22
+* Week 7, Feb 19 & Feb 21
     + Topic: Continuous character models
     + Items: Surface, OUwie, geiger
     + Videos: [OU, BM, etc](https://youtu.be/awN_VBv8reU?list=PLRyq_4VPZ9g9-pxqGRLJjE1FcqNvnC-gg)
@@ -136,7 +133,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
           + Exercise (for Thurs): https://github.com/bomeara/phylometh_continuous
 
 
-* Week 8, Feb 27 & Mar 1
+* Week 8, Feb 26 & Feb 28
     + Topic: Correlating characters
     + Items: independent contrasts, Pagel 1994, Hansen OU
     + Reading
@@ -146,17 +143,17 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Exercise (for Thurs): https://github.com/bomeara/phylometh_correlated
 
 
-* Week 9, Mar 6 & Mar 8
+* Week 9, Mar 5 & Mar 7
     + Topic: Biogeography and optimization
     + Reading
       + [Ronquist and Sanmartin, 2011](http://www.annualreviews.org/doi/abs/10.1146/annurev-ecolsys-102209-144710)
       + [Ree and Smith, 2008](https://academic.oup.com/sysbio/article/57/1/4/1703014/Maximum-Likelihood-Inference-of-Geographic-Range)
     + Exercise: None this week, but continue working on past ones.
 
-     
 
 
-* Week 10, Mar 20 & Mar 22
+
+* Week 10, Mar 12 & Mar 14
     + Topic: Diversification and SSE models
     + Items: diversitree, hisse
         + [Magallon and Sanderson, 2001](http://dx.doi.org/10.1554/0014-3820(2001)055[1762:ADRIAC]2.0.CO;2): As an empirical paper of ages, later work has improved on this, but it has extremely clear explanations of the math behind these methods.
@@ -165,22 +162,23 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
         + [Beaulieu & O'Meara, 2016](https://doi.org/10.1093/sysbio/syw022): A hidden state version of the BiSSE model.
     + Exercise: https://github.com/bomeara/phylometh_diversification
 
+* Spring break at UT March 18-22
 
-* Week 11, Mar 27 & Mar 29
+* Week 11, Mar 26 & Mar 28
     + Topic: Simulating data
     + Items: TreeSim, geiger
 
-* Week 12, Apr 3 & Apr 5
+* Week 12, Apr 2 & Apr 4
     + Topic: Building a new comparative method
 
-* Week 13, Apr 10 & Apr 12
+* Week 13, Apr 9 & Apr 11
     + Topic: Testing a new comparative method
 
-* Week 14, Apr 17 & Apr 19
+* Week 14, Apr 16 & Apr 18
     + Topic: Student choice
     + Exercise: make an R package based on the NSF API.
 
-* Week 11, Aprl 24 & April 26
+* Week 11, Aprl 23 & April 25
     + Topic: Student choice
     + Exercise: Mixed data types. https://github.com/bomeara/phylometh_mixed.
 
