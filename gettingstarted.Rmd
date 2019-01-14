@@ -4,7 +4,8 @@ author: "Brian O'Meara"
 output: html_document
 ---
 
-##Objectives
+## Objectives
+
 By the end of this week, you will have:
 
 * All required tools installed
@@ -13,6 +14,8 @@ By the end of this week, you will have:
     + command line
 * Ability to do the first assignment
 * Ability to talk to classmates
+
+You can get this document in R markdown format [here](gettingstarted.Rmd).
 
 Things I want you do are **in bold**.
 

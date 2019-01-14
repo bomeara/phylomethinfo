@@ -266,15 +266,14 @@ $(document).ready(function () {
 <h1>Gene Tree Species Tree</h1>
 <div id="objectives" class="section level2">
 <h2>Objectives</h2>
-<p>By the end of this chapter, you will:</p>
+<p>By the end of this exercise, you will:</p>
 <ul>
 <li>Understand why gene trees and species trees may not always agree</li>
 <li>Know about some of the approaches in this area</li>
 <li>Understand about phylogenetic networks</li>
 </ul>
 <p>First, we will be looking at distinctions between gene trees and species trees. For this, we’ll be using Liang Liu’s phybase package. This isn’t on CRAN, but it is available on his <a href="https://faculty.franklin.uga.edu/lliu/content/phybase?">website</a>. However, we’ll be using a version I modified slightly and put on github. Liang’s package uses <a href="http://evolution.genetics.washington.edu/phylip/newicktree.html">newick</a> format (yes, named after the <a href="http://newicks.com">restaurant</a>), but with additional options for including population size (branch width, included as a <code>#</code> sign followed by a number) as well as the more traditional branch length. Both matter for coalescence: two copies are much more likely to have coalesced on a long, narrow branch than a short, fat one. Most packages in R instead use ape’s <code>phylo</code> format, so I wrote a few functions to deal with that. This version of the package is on github; to install it:</p>
-<pre><code>library(devtools)
-install_github(&quot;bomeara/phybase&quot;)</code></pre>
+<pre><code>devtools::install_github(&quot;bomeara/phybase&quot;)</code></pre>
 <p>For real science, Liang’s is the canonical one (and definitely cite his) but this will be easier for us to use for class.</p>
 <p>First, get a tree from Open Tree of Life. We’ll get a recent plant tree from Beaulieu et al:</p>
 <pre class="r"><code>library(rotl)
