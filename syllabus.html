@@ -97,6 +97,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -111,7 +114,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -131,6 +133,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -152,18 +191,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -259,8 +357,8 @@ $(document).ready(function () {
 <div id="phylogenetic-methods-phylometh.-spring-2019" class="section level2">
 <h2>Phylogenetic Methods (PhyloMeth). Spring 2019</h2>
 <p>UT students may sign up at EEB 587.</p>
-<p>Syllabus version: 01:45 PM, 14 January, 2019</p>
-<p>Instructor: <strong><a href="http://www.brianomeara.info">Brian O’Meara</a></strong> (<a href="mailto:bomeara@utk.edu">bomeara@utk.edu</a>)</p>
+<p>Syllabus version: 12:37 PM, 31 January, 2019</p>
+<p>Instructor: <strong><a href="http://www.brianomeara.info">Brian O’Meara</a></strong> (<a href="mailto:bomeara@utk.edu" class="email">bomeara@utk.edu</a>)</p>
 <p>Course website: <a href="http://phylometh.info" class="uri">http://phylometh.info</a></p>
 <p>Office Hours (446 Hesler) by appointment (given few enrolled students this semester, being flexible with time makes sense).</p>
 <div id="anonymous-feedback" class="section level4">
@@ -298,7 +396,6 @@ $(document).ready(function () {
 </div>
 <div id="connecting" class="section level4">
 <h4>Connecting</h4>
-<p>We will meet via Zoom. The class meets 11:10 am - 12:25 pm US Eastern time. You can download a calendar files of meeting times <a href="https://tennessee.zoom.us/meeting/946522241/ics?icsToken=261f8071e9dfcf3384ab995c88f5bfaa8ec029c0e926ca7747c7cbe490136e22">here</a> (note I have the times so the meeting starts 40 minutes after class officially starts so you can join early). You can join the meeting at <a href="https://tennessee.zoom.us/j/946522241" class="uri">https://tennessee.zoom.us/j/946522241</a> (it will have you download the free Zoom app). You can call in (<a href="https://zoom.us/u/adNNl8oCNK">phone numbers for various countries</a>); the meeting id is <code>946 522 241</code>.</p>
 <p>The class discussion board is public on Slack; you will need the <a href="https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTg0ZDQ2NTdjMjg1ZWIxZjMzNTg4MDQ0ZmU2MmFiMTY1YTNlZDcyNTg2MjBkZGY4MGQ2MWM0MDkyZGQ2MDRmMWY">Slack invite code</a> to join.</p>
 </div>
 <div id="online-option" class="section level4">
@@ -308,14 +405,14 @@ $(document).ready(function () {
 <div id="schedule" class="section level3">
 <h3>Schedule</h3>
 <ul>
-<li>Week 1, Jan 10
+<li>Week 1
 <ul>
 <li>Topic: Getting ready</li>
 <li>Items: R, github, gitter, unit testing</li>
 <li>Instructions &amp; exercise: <a href="gettingstarted.html">Getting Started</a></li>
-<li>One way to do the exercise is to fork the <a href="https://github.com/bomeara/phylomethinfo">github repo</a>, clone it to your computer, start editing documents, then <code>git commit -m&quot;done homework&quot; -a</code>, then do a pull request.</li>
+<li>One way to do the exercise is to fork the <a href="https://github.com/bomeara/phylomethinfo">github repo</a>, clone it to your computer, start editing documents, then <code>git commit -m"done homework" -a</code>, then do a pull request.</li>
 </ul></li>
-<li>Week 2, Jan 15 &amp; Jan 17
+<li>Week 2
 <ul>
 <li>Topic: Gathering data</li>
 <li>Reading: <a href="https://bookdown.org/bomeara/comparative-methods/getting-data-and-trees-into-r.html">Chapter 3</a> of the textbook.</li>
@@ -324,7 +421,7 @@ $(document).ready(function () {
 <li>Exercise: <a href="gettingtrees.html">Getting trees</a></li>
 <li>In class: Discussion of what kinds of data you need for your questions, what kind of trees you need.</li>
 </ul></li>
-<li>Week 3, Jan 22 &amp; Jan 24
+<li>Week 3
 <ul>
 <li>Topic: Building trees</li>
 <li>Videos: <a href="https://www.youtube.com/watch?v=XSp1gEKNuIo">Terminology</a>, <a href="https://www.youtube.com/watch?v=SQw9ZWFp178">Tree space</a>, <a href="https://youtu.be/xOADfntkBrs">Likelihood vs Bayes</a></li>
@@ -344,7 +441,7 @@ $(document).ready(function () {
 <li><a href="https://de.cyverse.org/de/">Cyverse discovery environment</a>: Free service (thanks, NSF!) for running phylogenetic (and other) software</li>
 </ul></li>
 </ul></li>
-<li>Week 4, Jan 29 &amp; Jan 31
+<li>Week 4
 <ul>
 <li>Topic: Building trees</li>
 <li>Items: Gene tree species tree; Network</li>
@@ -358,7 +455,7 @@ $(document).ready(function () {
 </ul></li>
 <li>Class exercise: <a href="genetreespeciestree.html">Gene tree species tree</a></li>
 </ul></li>
-<li>Week 5, Feb 5 &amp; Feb 7
+<li>Week 5
 <ul>
 <li>Topic: Dating trees</li>
 <li>Items: Beast, r8s</li>
@@ -376,7 +473,7 @@ $(document).ready(function () {
 <li><a href="http://revbayes.github.io/tutorials.html">RevBayes</a> tutorials on dating.</li>
 </ul></li>
 </ul></li>
-<li>Week 6, Feb 12 &amp; Feb 14
+<li>Week 6
 <ul>
 <li>Topic: Discrete character models</li>
 <li>Items: corHMM, geiger</li>
@@ -389,7 +486,7 @@ $(document).ready(function () {
 </ul></li>
 <li>Exercise (for Thurs): <a href="discrete.html">Discrete data</a></li>
 </ul></li>
-<li>Week 7, Feb 19 &amp; Feb 21
+<li>Week 7
 <ul>
 <li>Topic: Continuous character models</li>
 <li>Items: Surface, OUwie, geiger</li>
@@ -405,7 +502,7 @@ $(document).ready(function () {
 </ul></li>
 </ul></li>
 </ul></li>
-<li>Week 8, Feb 26 &amp; Feb 28
+<li>Week 8
 <ul>
 <li>Topic: Correlating characters</li>
 <li>Items: independent contrasts, Pagel 1994, Hansen OU</li>
@@ -417,7 +514,7 @@ $(document).ready(function () {
 </ul></li>
 <li>Exercise (for Thurs): <a href="correlations.html">Correlations</a></li>
 </ul></li>
-<li>Week 9, Mar 5 &amp; Mar 7
+<li>Week 9
 <ul>
 <li>Topic: Biogeography and optimization</li>
 <li>Reading
@@ -427,7 +524,7 @@ $(document).ready(function () {
 </ul></li>
 <li>Exercise: None this week, but continue working on past ones.</li>
 </ul></li>
-<li>Week 10, Mar 12 &amp; Mar 14
+<li>Week 10
 <ul>
 <li>Topic: Diversification and SSE models</li>
 <li>Items: diversitree, hisse
@@ -439,26 +536,25 @@ $(document).ready(function () {
 </ul></li>
 <li>Exercise: <a href="diversification.html">Diversification</a></li>
 </ul></li>
-<li><p>Spring break at UT March 18-22</p></li>
-<li>Week 11, Mar 26 &amp; Mar 28
+<li>Week 11
 <ul>
 <li>Topic: Simulating data</li>
 <li>Items: TreeSim, geiger</li>
 </ul></li>
-<li>Week 12, Apr 2 &amp; Apr 4
+<li>Week 12
 <ul>
 <li>Topic: Building a new comparative method</li>
 </ul></li>
-<li>Week 13, Apr 9 &amp; Apr 11
+<li>Week 13
 <ul>
 <li>Topic: Testing a new comparative method</li>
 </ul></li>
-<li>Week 14, Apr 16 &amp; Apr 18
+<li>Week 14
 <ul>
 <li>Topic: Student choice</li>
 <li>Exercise: make an R package based on the NSF API.</li>
 </ul></li>
-<li>Week 11, Aprl 23 &amp; April 25
+<li>Week 11
 <ul>
 <li>Topic: Student choice</li>
 <li>Exercise: Mixed data types. <a href="https://github.com/bomeara/phylometh_mixed" class="uri">https://github.com/bomeara/phylometh_mixed</a>.</li>

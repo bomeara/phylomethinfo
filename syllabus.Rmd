@@ -51,8 +51,6 @@ The class is generally flipped: rather than me droning at the front of the room,
 
 #### Connecting
 
-We will meet via Zoom. The class meets 11:10 am - 12:25 pm US Eastern time. You can download a calendar files of meeting times [here](https://tennessee.zoom.us/meeting/946522241/ics?icsToken=261f8071e9dfcf3384ab995c88f5bfaa8ec029c0e926ca7747c7cbe490136e22) (note I have the times so the meeting starts 40 minutes after class officially starts so you can join early). You can join the meeting at https://tennessee.zoom.us/j/946522241 (it will have you download the free Zoom app). You can call in ([phone numbers for various countries](https://zoom.us/u/adNNl8oCNK)); the meeting id is `946 522 241`.
-
 The class discussion board is public on Slack; you will need the [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTg0ZDQ2NTdjMjg1ZWIxZjMzNTg4MDQ0ZmU2MmFiMTY1YTNlZDcyNTg2MjBkZGY4MGQ2MWM0MDkyZGQ2MDRmMWY) to join.
 
 #### Online option
@@ -60,13 +58,13 @@ There is a no-credit online option, as well.
 
 ### Schedule
 
-* Week 1, Jan 10
+* Week 1
     + Topic: Getting ready
     + Items: R, github, gitter, unit testing
     + Instructions & exercise: [Getting Started](gettingstarted.html)
     + One way to do the exercise is to fork the [github repo](https://github.com/bomeara/phylomethinfo), clone it to your computer, start editing documents, then `git commit -m"done homework" -a`, then do a pull request.
 
-* Week 2, Jan 15 & Jan 17
+* Week 2
     + Topic: Gathering data
     + Reading: [Chapter 3](https://bookdown.org/bomeara/comparative-methods/getting-data-and-trees-into-r.html) of the textbook.
     + Videos: See videos in this [playlist](https://www.youtube.com/playlist?list=PLrJfyqNDuTkMx_1OV_97S0jgdfmHfQ48x)
@@ -74,7 +72,7 @@ There is a no-credit online option, as well.
     + Exercise: [Getting trees](gettingtrees.html)
     + In class: Discussion of what kinds of data you need for your questions, what kind of trees you need.
 
-* Week 3, Jan 22 & Jan 24
+* Week 3
     + Topic: Building trees
     + Videos: [Terminology](https://www.youtube.com/watch?v=XSp1gEKNuIo), [Tree space](https://www.youtube.com/watch?v=SQw9ZWFp178), [Likelihood vs Bayes](https://youtu.be/xOADfntkBrs)
     + Reading
@@ -90,7 +88,7 @@ There is a no-credit online option, as well.
         + [Cyverse discovery environment](https://de.cyverse.org/de/): Free service (thanks, NSF!) for running phylogenetic (and other) software
 
 
-* Week 4, Jan 29 & Jan 31
+* Week 4
     + Topic: Building trees
     + Items: Gene tree species tree; Network
     + Reading
@@ -103,7 +101,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Class exercise: [Gene tree species tree](genetreespeciestree.html)
 
 
-* Week 5, Feb 5 & Feb 7
+* Week 5
     + Topic: Dating trees
     + Items: Beast, r8s
     + Reading
@@ -116,7 +114,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Exercise
         + [RevBayes](http://revbayes.github.io/tutorials.html) tutorials on dating.
 
-* Week 6, Feb 12 & Feb 14
+* Week 6
     + Topic: Discrete character models
     + Items: corHMM, geiger
     + Video: [PhyloMeth discrete characters](https://youtu.be/0OWX6WMNQ3o?list=PLrJfyqNDuTkOzbZfsM_xIkNIBjF7zmVP4)
@@ -127,7 +125,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Exercise (for Thurs): [Discrete data](discrete.html)
 
 
-* Week 7, Feb 19 & Feb 21
+* Week 7
     + Topic: Continuous character models
     + Items: Surface, OUwie, geiger
     + Videos: [OU, BM, etc](https://youtu.be/awN_VBv8reU?list=PLRyq_4VPZ9g9-pxqGRLJjE1FcqNvnC-gg)
@@ -139,7 +137,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
           + Exercise (for Thurs): [Continuous data](continuous.html)
 
 
-* Week 8, Feb 26 & Feb 28
+* Week 8
     + Topic: Correlating characters
     + Items: independent contrasts, Pagel 1994, Hansen OU
     + Reading
@@ -149,7 +147,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Exercise (for Thurs): [Correlations](correlations.html)
 
 
-* Week 9, Mar 5 & Mar 7
+* Week 9
     + Topic: Biogeography and optimization
     + Reading
       + [Ronquist and Sanmartin, 2011](http://www.annualreviews.org/doi/abs/10.1146/annurev-ecolsys-102209-144710)
@@ -159,7 +157,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
 
 
 
-* Week 10, Mar 12 & Mar 14
+* Week 10
     + Topic: Diversification and SSE models
     + Items: diversitree, hisse
         + [Magallon and Sanderson, 2001](http://dx.doi.org/10.1554/0014-3820(2001)055[1762:ADRIAC]2.0.CO;2): As an empirical paper of ages, later work has improved on this, but it has extremely clear explanations of the math behind these methods.
@@ -168,23 +166,21 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
         + [Beaulieu & O'Meara, 2016](https://doi.org/10.1093/sysbio/syw022): A hidden state version of the BiSSE model.
     + Exercise: [Diversification](diversification.html)
 
-* Spring break at UT March 18-22
-
-* Week 11, Mar 26 & Mar 28
+* Week 11
     + Topic: Simulating data
     + Items: TreeSim, geiger
 
-* Week 12, Apr 2 & Apr 4
+* Week 12
     + Topic: Building a new comparative method
 
-* Week 13, Apr 9 & Apr 11
+* Week 13
     + Topic: Testing a new comparative method
 
-* Week 14, Apr 16 & Apr 18
+* Week 14
     + Topic: Student choice
     + Exercise: make an R package based on the NSF API.
 
-* Week 11, Aprl 23 & April 25
+* Week 11
     + Topic: Student choice
     + Exercise: Mixed data types. https://github.com/bomeara/phylometh_mixed.
 
