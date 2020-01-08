@@ -7,7 +7,7 @@ output:
   word_document: default
 ---
 
-## Phylogenetic Methods (PhyloMeth). Spring 2019
+## Phylogenetic Methods (PhyloMeth). Spring 2020
 
 UT students may sign up at EEB 587.
 
@@ -21,7 +21,7 @@ Office Hours (446 Hesler) by appointment (given few enrolled students this semes
 
 #### Anonymous feedback
 
-http://www.brianomeara.info/feedback
+https://www.brianomeara.info/feedback.html
 
 #### What you will learn
 This is a modern class in phylogenetic methods. You will learn how to get data, build a tree, use comparative methods, and how to make new methods. More importantly, you will learn **why** to do all this.
@@ -51,9 +51,10 @@ The class is generally flipped: rather than me droning at the front of the room,
 
 #### Connecting
 
-The class discussion board is public on Slack; you will need the [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTg0ZDQ2NTdjMjg1ZWIxZjMzNTg4MDQ0ZmU2MmFiMTY1YTNlZDcyNTg2MjBkZGY4MGQ2MWM0MDkyZGQ2MDRmMWY) to join.
+The class discussion board is public on Slack; you will need the [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTY1YTEyOWZiMTk3OTkyY2M3OWYyODhlODM3ZWMwZjg0NGI5OWM5YWI0Y2I3NWU2ZTJiZGNkNmU0ZTFjZGRlOGI) to join.
 
 #### Online option
+
 There is a no-credit online option, as well.
 
 ### Schedule
@@ -186,7 +187,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
 
 **Course made possible by**:  NSF CAREER grant to O'Meara & ongoing support from the Department of Ecology & Evolutionary Biology, U. of Tennessee, Knoxville.
 
-My goal is to have you learn. If you are having trouble with something in the course, or if there is a topic you just have to learn more about, let me know (email, office hours, online forum, etc.). Faculty often use evaluations at the end of the semester to get info from students so we can improve before the next class, but this does not help you directly. To allow the class to improve while you are taking it, I have created a site for anonymous feedback at http://brianomeara.info/teaching/feedback/ (and yes, it is really anonymous). Let me know things that are going well or poorly — both are important. I might not implement all your suggestions, but they will all be read and considered, generally the same day you submit them.
+My goal is to have you learn. If you are having trouble with something in the course, or if there is a topic you just have to learn more about, let me know (email, office hours, online forum, etc.). Faculty often use evaluations at the end of the semester to get info from students so we can improve before the next class, but this does not help you directly. To allow the class to improve while you are taking it, I have created a site for anonymous feedback at https://www.brianomeara.info/feedback.html (and yes, it is really anonymous). Let me know things that are going well or poorly — both are important. I might not implement all your suggestions, but they will all be read and considered, generally the same day you submit them.
 
 Any student who feels s/he may need an accommodation based on the impact of a disability should contact me privately to discuss specific needs.  Please contact the Office of Disability Services at 865-974-6087 in Dunford Hall to coordinate reasonable accommodations for students with documented disabilities.
 

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Brian C. O’Meara" />
@@ -15,6 +15,7 @@
 <title>Continuous character models</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -32,6 +33,7 @@
 
   gtag('config', 'UA-103450-7');
 </script>
+
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -79,9 +81,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -95,7 +95,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -200,8 +199,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -246,6 +243,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -258,20 +256,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -358,18 +353,23 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Continuous character models</h1>
-<h4 class="author"><em>Brian C. O’Meara</em></h4>
-<h4 class="date"><em>31 January, 2019</em></h4>
+<h4 class="author">Brian C. O’Meara</h4>
+<h4 class="date">08 January, 2020</h4>
 
 </div>
 
 
 <p>First get packages we need</p>
 <pre class="r"><code>install.packages(&quot;yearn&quot;)</code></pre>
-<pre><code>## Warning: package &#39;yearn&#39; is not available (for R version 3.5.2)</code></pre>
-<pre class="r"><code>yearn::yearn(ape) #utility fns
-yearn::yearn(geiger) #utilty fns
-yearn::yearn(OUwie)</code></pre>
+<pre><code>## Warning: package &#39;yearn&#39; is not available (for R version 3.6.1)</code></pre>
+<pre class="r"><code>library(ape) #utility fns
+library(geiger) #utilty fns</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;geiger&#39;:
+##   method            from
+##   unique.multiPhylo ape</code></pre>
+<pre class="r"><code>library(OUwie)</code></pre>
+<pre><code>## Loading required package: nloptr</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
 <p>Now get the tree and data. For these exercises, knowing uncertainty in your measurements can also be important. (remember for homework to change <code>eval=FALSE</code> to <code>eval=TRUE</code>).</p>
 <pre class="r"><code>tree &lt;- read.tree(&quot;____PATH_TO_TREE_OR_SOME_OTHER_WAY_OF_GETTING_A_TREE____&quot;)
 continuous.data &lt;- read.csv(file=&quot;____PATH_TO_DATA_OR_SOME_OTHER_WAY_OF_GETTING_TRAITS____&quot;, stringsAsFactors=FALSE) #death to factors.</code></pre>
@@ -459,7 +459,7 @@ points(x=best$theta[1,1], y=best$theta[2,1], col=&quot;red&quot;, pch=16)
 points(x=trait$X[which(trait$Reg==1)],y=rep(min(c(theta1.points, theta2.points)), length(which(trait$Reg==1))), pch=18, col=rgb(0,0,0,.3)) #the tip values in regime 1, plotted along x axis
 points(y=trait$X[which(trait$Reg==2)],x=rep(min(c(theta1.points, theta2.points)), length(which(trait$Reg==2))), pch=18, col=rgb(0,0,0,.3)) #the tip values in regime 2, plotted along y axis</code></pre>
 <p>The below only works if the discrete trait rate is low, so you have a good chance of estimating where the state is. If it evolves quickly, hard to estimate where the regimes are, so some in regime 1 are incorrectly mapped in regime 2 vice versa. This makes the models more similar than they should be. See Revell 2013, <a href="DOI:10.1093/sysbio/sys084" class="uri">DOI:10.1093/sysbio/sys084</a> for an exploration of this effect.</p>
-<pre class="r"><code>yearn::yearn(phytools)
+<pre class="r"><code>library(phytools)
 trait.ordered&lt;-data.frame(trait[,2], trait[,2],row.names=trait[,1])
 trait.ordered&lt;- trait.ordered[tree$tip.label,]
 z&lt;-trait.ordered[,1]
@@ -491,6 +491,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

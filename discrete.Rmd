@@ -15,11 +15,11 @@ r <- getOption("repos")
 r["CRAN"] <- "http://cran.cnr.berkeley.edu/"
 options(repos = r)
 install.packages("yearn")
-yearn::yearn(ape)
-yearn::yearn(geiger)
-yearn::yearn(phytools)
-yearn::yearn(phangorn)
-yearn::yearn(corHMM)
+library(ape)
+library(geiger)
+library(phytools)
+library(phangorn)
+library(corHMM)
 ```
 
 You'll need to get data into R in some way. Look at other phylometh assignments for how to get trees and data.

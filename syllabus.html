@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Brian O’Meara" />
@@ -15,6 +15,7 @@
 <title>PhyloMeth: Syllabus</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -70,9 +71,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -86,7 +85,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -191,8 +189,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -237,6 +233,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -249,20 +246,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -349,21 +343,21 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">PhyloMeth: Syllabus</h1>
-<h4 class="author"><em>Brian O’Meara</em></h4>
+<h4 class="author">Brian O’Meara</h4>
 
 </div>
 
 
-<div id="phylogenetic-methods-phylometh.-spring-2019" class="section level2">
-<h2>Phylogenetic Methods (PhyloMeth). Spring 2019</h2>
+<div id="phylogenetic-methods-phylometh.-spring-2020" class="section level2">
+<h2>Phylogenetic Methods (PhyloMeth). Spring 2020</h2>
 <p>UT students may sign up at EEB 587.</p>
-<p>Syllabus version: 12:37 PM, 31 January, 2019</p>
+<p>Syllabus version: 01:55 PM, 08 January, 2020</p>
 <p>Instructor: <strong><a href="http://www.brianomeara.info">Brian O’Meara</a></strong> (<a href="mailto:bomeara@utk.edu" class="email">bomeara@utk.edu</a>)</p>
 <p>Course website: <a href="http://phylometh.info" class="uri">http://phylometh.info</a></p>
 <p>Office Hours (446 Hesler) by appointment (given few enrolled students this semester, being flexible with time makes sense).</p>
 <div id="anonymous-feedback" class="section level4">
 <h4>Anonymous feedback</h4>
-<p><a href="http://www.brianomeara.info/feedback" class="uri">http://www.brianomeara.info/feedback</a></p>
+<p><a href="https://www.brianomeara.info/feedback.html" class="uri">https://www.brianomeara.info/feedback.html</a></p>
 </div>
 <div id="what-you-will-learn" class="section level4">
 <h4>What you will learn</h4>
@@ -396,7 +390,7 @@ $(document).ready(function () {
 </div>
 <div id="connecting" class="section level4">
 <h4>Connecting</h4>
-<p>The class discussion board is public on Slack; you will need the <a href="https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTg0ZDQ2NTdjMjg1ZWIxZjMzNTg4MDQ0ZmU2MmFiMTY1YTNlZDcyNTg2MjBkZGY4MGQ2MWM0MDkyZGQ2MDRmMWY">Slack invite code</a> to join.</p>
+<p>The class discussion board is public on Slack; you will need the <a href="https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTY1YTEyOWZiMTk3OTkyY2M3OWYyODhlODM3ZWMwZjg0NGI5OWM5YWI0Y2I3NWU2ZTJiZGNkNmU0ZTFjZGRlOGI">Slack invite code</a> to join.</p>
 </div>
 <div id="online-option" class="section level4">
 <h4>Online option</h4>
@@ -561,7 +555,7 @@ $(document).ready(function () {
 </ul></li>
 </ul>
 <p><strong>Course made possible by</strong>: NSF CAREER grant to O’Meara &amp; ongoing support from the Department of Ecology &amp; Evolutionary Biology, U. of Tennessee, Knoxville.</p>
-<p>My goal is to have you learn. If you are having trouble with something in the course, or if there is a topic you just have to learn more about, let me know (email, office hours, online forum, etc.). Faculty often use evaluations at the end of the semester to get info from students so we can improve before the next class, but this does not help you directly. To allow the class to improve while you are taking it, I have created a site for anonymous feedback at <a href="http://brianomeara.info/teaching/feedback/" class="uri">http://brianomeara.info/teaching/feedback/</a> (and yes, it is really anonymous). Let me know things that are going well or poorly — both are important. I might not implement all your suggestions, but they will all be read and considered, generally the same day you submit them.</p>
+<p>My goal is to have you learn. If you are having trouble with something in the course, or if there is a topic you just have to learn more about, let me know (email, office hours, online forum, etc.). Faculty often use evaluations at the end of the semester to get info from students so we can improve before the next class, but this does not help you directly. To allow the class to improve while you are taking it, I have created a site for anonymous feedback at <a href="https://www.brianomeara.info/feedback.html" class="uri">https://www.brianomeara.info/feedback.html</a> (and yes, it is really anonymous). Let me know things that are going well or poorly — both are important. I might not implement all your suggestions, but they will all be read and considered, generally the same day you submit them.</p>
 <p>Any student who feels s/he may need an accommodation based on the impact of a disability should contact me privately to discuss specific needs. Please contact the Office of Disability Services at 865-974-6087 in Dunford Hall to coordinate reasonable accommodations for students with documented disabilities.</p>
 <p>All relevant University policies (including, but not limited to, policies on academic integrity, attendance, etc.) apply to this course. In the case of any conflict between the policies in this syllabus and University policy, University policy applies. The instructor reserves the right to revise, alter, and/or amend this syllabus as necessary. Students will be notified by email of any such revisions, alterations, and/or amendments.</p>
 </div>
@@ -584,6 +578,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

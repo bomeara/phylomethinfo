@@ -116,7 +116,7 @@ This exercise is partially based on the [HiSSE vignette](https://cran.r-project.
 
 First, simulate a tree and characters to use:
 
-```{r}
+```{r simulate_data, eval=FALSE}
 speciation.rates <- c(0.1, 0.1, 0.1, 0.2) #0A, 1A, 0B, 1B
 extinction.rates <- rep(0.03, 4)
 transition.rates <- c(0.01,0.01,0, 0.01, 0, 0.01, 0.01,0,0.01, 0,0.01,0.01)
@@ -133,11 +133,11 @@ sim.dat[,2] = sim.dat[,2] - 1
 
 As always, look at what we have wrought:
 
-```{r}
+```{r, eval=FALSE}
 plot(phy)
 ```
 
-```{r}
+```{r, eval=FALSE}
 knitr::kable(cbind(sim.dat, true.char=sim.dat.true$phy.tip.state))
 ```
 
