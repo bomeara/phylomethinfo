@@ -54,7 +54,7 @@ The class is generally flipped: rather than me droning at the front of the room,
 
 #### Connecting
 
-The class discussion board is public on Slack; you will need the [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTY1YTEyOWZiMTk3OTkyY2M3OWYyODhlODM3ZWMwZjg0NGI5OWM5YWI0Y2I3NWU2ZTJiZGNkNmU0ZTFjZGRlOGI) to join.
+The class discussion board is public on Slack; you will need the [Slack invite code]https://join.slack.com/t/phylometh/shared_invite/enQtOTAwMDQwMTMyODMyLTM2N2I1YmRjNzhkM2ZhYWVhMzlhMjU1YzExZTQ2MGRlYTQyMzA3YzBjYWQyYzhmNGMxYzgzOTJhZTAwYTA2NzI) to join.
 
 #### Online option
 

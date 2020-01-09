@@ -8,7 +8,7 @@ This is a course on Phylogenetic Methods: building and using trees to answer com
 
 The [syllabus](syllabus.html) has information to support your learning.
 
-You can join discussions with this [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtNTE5ODEzNDk5MDkyLTg0ZDQ2NTdjMjg1ZWIxZjMzNTg4MDQ0ZmU2MmFiMTY1YTNlZDcyNTg2MjBkZGY4MGQ2MWM0MDkyZGQ2MDRmMWY). See the [syllabus](syllabus.html) for how to dial in for class sessions from Zoom.
+You can join discussions with this [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtOTAwMDQwMTMyODMyLTM2N2I1YmRjNzhkM2ZhYWVhMzlhMjU1YzExZTQ2MGRlYTQyMzA3YzBjYWQyYzhmNGMxYzgzOTJhZTAwYTA2NzI). See the [syllabus](syllabus.html) for how to dial in for class sessions from Zoom.
 
 The course features instructional videos, exercises, and a textbook. All are still being refined, so check back often.
 
