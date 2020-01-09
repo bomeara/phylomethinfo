@@ -46,18 +46,14 @@ library(ctv) #to load the package
 install.views(c("Phylogenetics", "WebTechnologies"))
 ```
 
-We will be using unit testing to check homework. For this, you will need to install the `testthat` package.
-
-```
-install.packages("testthat")
-```
 
 Bioconductor is a separate repository with lots of packages for dealing with genetic data, especially nextgen data. To install this and a few initial packages:
 
 ```
-source("http://bioconductor.org/biocLite.R")
-biocLite()
-biocLite("Biostrings")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "3.10")
+BiocManager::install("Biostrings", ask=FALSE)
 ```
 
 I would suggest using RStudio for writing R and handling markdown (see below). It is free and open source; you can install it from [here](https://www.rstudio.com/products/RStudio/).
@@ -66,60 +62,28 @@ Once you have all this done, it is time to start the exercise.
 
 ## Exercise
 
-We are going to adopt a programming approach that has you write functions in one file, then run analyses in an R markdown document. This very document is an R markdown doc, actually. Markdown is like a very lightweight alternative to html that is far more readable. Rather than writing `<b>this</b>` to make **bold** text, you can instead write `**this**`. "So what?" was my first thought, but it turns out it does make a lot of things easier. R markdown lets you embed R calls within a document and so intersperse text and code very naturally. It can embed figures, too. In fact, the book for the course is written in R markdown.
+### Objectives
+
+* Learn about git and GitHub
+* Use markdown for analyses
+* Start organizing work reproducibly
+
+A common approach in using R or similar tools is to enter commands one at a time. This is fast and interactive, but it can lead to lack of reproducibility. When you get reviewer's comments back in 3 months, will you be able to remember what you did? Can you redo it with a small tweak? The next stage of analysis is to have commands entered into a file that you then paste into an interactive session, perhaps in blocks. This is easier, but leads to risks where people "know" what order to load lines, using different lines for different analyses, and so forth. We are going to use a single document format that incorporates R code and other text called rmarkdown. It is pretty lightweight compared to more sophisticated approaches like [drake](https://github.com/ropensci/drake), but it can be flexible and useful in general (this website and the course book are made this way, in fact).
+
+Rmarkdown is an expansion of the regular markdown format to allow use of R code. Markdown is like a very simple alternative to html that is far more readable. Rather than writing `<b>this</b>` to make **bold** text, you can instead write `**this**`. "So what?" was my first thought, but it turns out it does make a lot of things easier. R markdown lets you embed R calls within a document and so intersperse text and code very naturally. It can embed figures, too.
+
+The other tool we will be using is git. Many people are familiar with Track Changes in Microsoft Word. Now imagine the same thing, but for many files, not just one, with the ability to roll any file back to any version, to merge changes from different people working at different times, and more. That is git (and other version control systems, though git has won for now). It's software you can run on your own computer completely without using any external services. However, it is often convenient to use a website to host the files and allow different people to work on them collaboratively. The most popular one, and the one we are using in this class, is [GitHub](https://github.com/), though there are competitors like [GitLab](https://about.gitlab.com/), [BitBucket](https://bitbucket.org/product), and more. These various sites compete with features, prices (all offer a free tier, some offer [student benefits](https://education.github.com/pack)), and, lately, positions on various ethical questions relating to funding sources, open source philosophy, and more.
 
 Your assignment has three parts:
 
-1. Using github, **fork**  https://github.com/bomeara/phylomethinfo. Then **clone** it. Your clone is how you will do homework: you will change things, commit them, and then try doing a pull request. I will review your pull requests to give you feedback on the homework.
-2. Figure out how to write R markdown by modifying this file as indicated below.
-3. Fix the functions in `gettingstarted_exercise.R`
+1. Set up git with Rstudio following [Jenny Bryan's book chapter on this](https://happygitwithr.com/rstudio-git-github.html).
+2. Create a new project on GitHub for phylometh_exercises (or some other name)
+3. Within that project, make a folder for gettingstarted
+4. Copy the text below the instructions into a new file gettingstarted_exercise.Rmd (you can make this in Rstudio)
+5. Edit the file and render it when done. Make sure to add the new html file and the Rmd file back to GitHub, and contact me on slack to let me know it's done.
 
-### R Markdown Exercise
+### Code to paste into your Rmd file
 
-R calls in R markdown go within sections delimited by three backticks (`, the character just to the left of the 1 on US English keyboards; YMMV on other keyboards). For R code to execute, you must include {r} after the first three. Look in the raw file here at the section below:
-
-```{r}
-2+3
-library(ape)
-plot(rcoal(5))
-```
-
-Look at the Markdown Cheatsheet [PDF](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) for more info.
-
-*To do*
-
-Take the following lines and do what they say.
-
-MAKE THIS LINE BOLD
-
-MAKE THE WORD ITALIC ITALICIZED
-
-MAKE THE FOLLOWING R CODE CREATE A PLOT IN THIS DOCUMENT
-
-plot(density(rnorm(1000)))
-
-### R exercise
-
-Edit this document so that this code all runs properly. You will need to change `eval=FALSE` to `eval=TRUE` within the curly brackets, then do
-
-```rmarkdown::render("gettingstarted.Rmd")```.
-
-
-```{r eval=FALSE}
-# Some basic tests to make sure things are running.
-
-GetHowManyTrees <- function(ntaxa=10) {
-	#ape can compute this for us.
-	result <- ___SOME FUNCTION WITH AN ARGUMENT_____
-	return(result)
-}
-
-GetAlignment <- function() {
-	#Let's see where mafft is installed
-	library(ape)
-	print(system("which mafft"))
-	data(woodmouse)
-	result <- ips::mafft(____SOME INPUT ARGUMENT____)
-	return(result)
-}
-```
+````
+`r paste(readLines('gettingstarted_example.txt'), collapse = '\n')`
+````

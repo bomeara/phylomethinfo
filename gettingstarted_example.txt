@@ -1,0 +1,44 @@
+
+---
+title: "Getting Started"
+author: "Eager PhyloMeth student"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+R calls in R markdown go within sections delimited by three backticks (`, the character just to the left of the 1 on US English keyboards; YMMV on other keyboards). For R code to execute, you must include {r} after the first three.
+
+```{r}
+2+3
+library(ape)
+plot(rcoal(5))
+```
+
+Look at the Markdown Cheatsheet [PDF](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) for more info.
+
+*To do*
+
+Take the following lines and do what they say.
+
+MAKE THIS LINE BOLD
+
+MAKE THE WORD ITALIC ITALICIZED
+
+MAKE THE FOLLOWING R CODE CREATE A PLOT IN THIS DOCUMENT
+
+plot(density(rnorm(1000)))
+
+### R exercise
+
+Edit this document so that this code all runs properly. You can create the final document by doing `rmarkdown::render("gettingstarted_exercise.Rmd")` in R or hitting the knit button in Rstudio.
+
+
+```{r}
+# Experience with coding.
+
+GetHowManyTrees <- function(ntaxa=10) {
+	#ape can compute this for us. help(package="ape") for help on ape.
+	result <- ___SOME FUNCTION WITH AN ARGUMENT_____
+	return(result)
+}
+```

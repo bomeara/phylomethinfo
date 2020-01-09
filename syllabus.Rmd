@@ -24,9 +24,11 @@ Office Hours (446 Hesler) by appointment (given few enrolled students this semes
 https://www.brianomeara.info/feedback.html
 
 #### What you will learn
-This is a modern class in phylogenetic methods. You will learn how to get data, build a tree, use comparative methods, and how to make new methods. More importantly, you will learn **why** to do all this.
+
+This is a modern class in phylogenetic methods. You will learn how to get data, build a tree, use comparative methods, and how to make new methods. More importantly, you will learn **why** to do all this. You will also learn some best practices -- these will be annoying at first, but worth it overall.
 
 #### Requirements
+
 * A laptop on which you can install software (have root / admin access)
     + It'll be easiest if this is a Mac; less easy is Linux; Windows will be hard
 * A question and some data to answer it
@@ -42,6 +44,7 @@ I am revising a textbook as part of the course
 It will be updated as we go, so check back frequently.
 
 #### Evaluation
+
 Grading will be based on effort and performance. Some of the things will be harder for some students than others just given differences in what they've been exposed to so far, and I don't want to penalize students who are less skilled at R, for example. But I do require that you put in work on this class: work through the exercises, think about the papers, etc. Much of the homework is chewy, so it will take some thought to get through, and you might not be able to do all of this. That's ok. *But ask for help!*
 
 These projects should be able to serve as the core for a dissertation chapter or published paper: still requiring more work and writing, but a solid idea with preliminary results.
