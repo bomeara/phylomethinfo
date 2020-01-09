@@ -66,7 +66,6 @@ There is a no-credit online option, as well.
     + Topic: Getting ready
     + Items: R, github, gitter, unit testing
     + Instructions & exercise: [Getting Started](gettingstarted.html)
-    + One way to do the exercise is to fork the [github repo](https://github.com/bomeara/phylomethinfo), clone it to your computer, start editing documents, then `git commit -m"done homework" -a`, then do a pull request.
 
 * Week 2
     + Topic: Gathering data

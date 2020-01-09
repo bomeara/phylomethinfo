@@ -363,8 +363,13 @@ $(document).ready(function () {
 <pre class="r"><code>install.packages(&quot;yearn&quot;)</code></pre>
 <pre><code>## Warning: package &#39;yearn&#39; is not available (for R version 3.6.2)</code></pre>
 <pre class="r"><code>library(ape) #utility fns
-library(geiger) #utilty fns
-library(OUwie)</code></pre>
+library(geiger) #utilty fns</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;geiger&#39;:
+##   method            from
+##   unique.multiPhylo ape</code></pre>
+<pre class="r"><code>library(OUwie)</code></pre>
+<pre><code>## Loading required package: nloptr</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
 <p>Now get the tree and data. For these exercises, knowing uncertainty in your measurements can also be important. (remember for homework to change <code>eval=FALSE</code> to <code>eval=TRUE</code>).</p>
 <pre class="r"><code>tree &lt;- read.tree(&quot;____PATH_TO_TREE_OR_SOME_OTHER_WAY_OF_GETTING_A_TREE____&quot;)
 continuous.data &lt;- read.csv(file=&quot;____PATH_TO_DATA_OR_SOME_OTHER_WAY_OF_GETTING_TRAITS____&quot;, stringsAsFactors=FALSE) #death to factors.</code></pre>
