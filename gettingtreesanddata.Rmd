@@ -7,13 +7,13 @@ output: pdf_document
 
 Let's get some trees from Open Tree of Life. This is in some ways a successor to TreeBASE: another repository of trees (though it has only partial overlap with the trees in TreeBASE (or in another repository, Dryad). Unlike TreeBASE, anyone, not just the author, can add trees to Open Tree's repository. Another important distinction is that Open Tree seeks to create a single tree for all life by creating essentially a supreme super tree.
 
-Now let's get a tree, replacing the `eval=FALSE` with `eval=TRUE` and replacing the missing info.
+Now let's get ya tree, replacing the `eval=FALSE` with `eval=TRUE` and replacing the missing info.
 
 ```{r, eval=FALSE}
 
 GetTreeFromOpenTree <- function() {
-	yearn(rotl)
-	yearn(ape)
+	library(rotl)
+	library(ape)
 
  anolis.id <- tnrs_match_names("__________")$ott_id
 

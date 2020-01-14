@@ -360,10 +360,10 @@ $(document).ready(function () {
 
 
 <p>Let’s get some trees from Open Tree of Life. This is in some ways a successor to TreeBASE: another repository of trees (though it has only partial overlap with the trees in TreeBASE (or in another repository, Dryad). Unlike TreeBASE, anyone, not just the author, can add trees to Open Tree’s repository. Another important distinction is that Open Tree seeks to create a single tree for all life by creating essentially a supreme super tree.</p>
-<p>Now let’s get a tree, replacing the <code>eval=FALSE</code> with <code>eval=TRUE</code> and replacing the missing info.</p>
+<p>Now let’s get ya tree, replacing the <code>eval=FALSE</code> with <code>eval=TRUE</code> and replacing the missing info.</p>
 <pre class="r"><code>GetTreeFromOpenTree &lt;- function() {
-    yearn(rotl)
-    yearn(ape)
+    library(rotl)
+    library(ape)
 
  anolis.id &lt;- tnrs_match_names(&quot;__________&quot;)$ott_id
 
