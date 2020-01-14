@@ -72,7 +72,7 @@ There is a no-credit online option, as well.
     + Reading: [Chapter 3](https://bookdown.org/bomeara/comparative-methods/getting-data-and-trees-into-r.html) of the textbook.
     + Videos: See videos in this [playlist](https://www.youtube.com/playlist?list=PLrJfyqNDuTkMx_1OV_97S0jgdfmHfQ48x)
     + Items: Sequences, trees, name resolution, alignment
-    + Exercise: [Getting trees](gettingtreesanddata.html)
+    + Exercise: [Getting trees](gettingtreesanddata.html), but often easier to get the [raw file instead](https://raw.githubusercontent.com/bomeara/phylomethinfo/master/gettingtreesanddata.Rmd).
     + In class: Discussion of what kinds of data you need for your questions, what kind of trees you need.
 
 * Week 3
