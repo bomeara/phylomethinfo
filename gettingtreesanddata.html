@@ -365,40 +365,40 @@ $(document).ready(function () {
     library(rotl)
     library(ape)
 
- anolis.id &lt;- tnrs_match_names(&quot;__________&quot;)$ott_id
+ formica.id &lt;- tnrs_match_names(&quot;__________&quot;)$ott_id
 
     # Now get Open Tree&#39;s current best estimate of the phylogeny for the group
     # They call this the tree of life; we can get the subtree for just this group.
-    anolis.tree &lt;- tol_subtree(ott_id=anolis.id)
+    formica.tree &lt;- tol_subtree(ott_id=formica.id)
 
     # Let&#39;s plot the tree:
     plot.phylo(&quot;__________&quot;, type=&quot;fan&quot;, cex=0.2)</code></pre>
 <p>It has a lot of polytomies, representing uncertainty. A maximally resolved tree (if rooted) will have one fewer internal nodes than terminal nodes: think of a tree with three taxa, ((A,B),C): it will have the MRCA of A and B and the MRCA of A, B, and C: three terminals, two internal nodes. If it had no information, it would only have one node. So we can look at the ratio of number of internal nodes to number of possible internal nodes to figure out how resolved a tree is (subtracting 1 from each to account for the root node that must always exist)</p>
-<pre class="r"><code>    print(paste(&quot;The Anolis tree has &quot;, Ntip(anolis.tree), &quot; terminals and &quot;,
-    Nnode(anolis.tree), &quot; internal nodes out of &quot;,Ntip(anolis.tree)-2,
+<pre class="r"><code>    print(paste(&quot;The formica tree has &quot;, Ntip(formica.tree), &quot; terminals and &quot;,
+    Nnode(formica.tree), &quot; internal nodes out of &quot;,Ntip(formica.tree)-2,
     &quot; possible, which means it is &quot;,
-    round(100*(Nnode(anolis.tree)-1)/(Ntip(anolis.tree)-3), 2),
+    round(100*(Nnode(formica.tree)-1)/(Ntip(formica.tree)-3), 2),
     &quot;% resolved&quot;, sep=&quot;&quot;))
 
     # Open Tree can also return the original studies with the source trees.
-    anolis.studies &lt;- studies_find_studies(property=&quot;ot:focalCladeOTTTaxonName&quot;,
-    value=&quot;Anolis&quot;)
-    anolis.studies.ids &lt;- unlist(anolis.studies$study_ids)
+    formica.studies &lt;- studies_find_studies(property=&quot;ot:focalCladeOTTTaxonName&quot;,
+    value=&quot;formica&quot;)
+    formica.studies.ids &lt;- unlist(formica.studies$study_ids)
 
     # Let&#39;s get info on the first study
-    anolis.study1.metadata &lt;- get_study_meta(anolis.studies[[1]][[1]])
-    print(get_publication(anolis.study1.metadata))
+    formica.study1.metadata &lt;- get_study_meta(formica.studies[[1]][[1]])
+    print(get_publication(formica.study1.metadata))
 
     # And let&#39;s get the tree from this study
     # Look in rotl documentation for the right function
     # Hint: get_study_trees() is close, but you don&#39;t know the tree.id
-  anolis.study1.tree1 &lt;- get_______FUNCTION_FROM_rotl____(anolis.studies.ids[[1]])
+  formica.study1.tree1 &lt;- get_______FUNCTION_FROM_rotl____(formica.studies.ids[[1]])
 
     # And plot it
-    plot.phylo(anolis.study1.tree1, type=&quot;fan&quot;, cex=0.2)
+    plot.phylo(formica.study1.tree1, type=&quot;fan&quot;, cex=0.2)
 
     #Return both trees
-    return.list &lt;- list(anolis.tree, anolis.study1.tree1)
+    return.list &lt;- list(formica.tree, formica.study1.tree1)
     names(return.list) &lt;- c(&quot;tol.tree&quot;, &quot;study1.tree&quot;)
     return(return.list)
 }</code></pre>
