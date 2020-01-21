@@ -79,10 +79,10 @@ There is a no-credit online option, as well.
     + Topic: Building trees
     + Videos: [Terminology](https://www.youtube.com/watch?v=XSp1gEKNuIo), [Tree space](https://www.youtube.com/watch?v=SQw9ZWFp178), [Likelihood vs Bayes](https://youtu.be/xOADfntkBrs)
     + Reading
-        + [Felsenstein 1978](https://www.mendeley.com/catalog/cases-parsimony-compatibility-methods-positively-misleading/)
-        + [Felsenstein 1985](https://www.mendeley.com/catalog/confidence-limits-phylogenies-approach-using-bootstrap-55/)
-        + [Lewis 2001](https://www.mendeley.com/catalog/phylogenetic-systematics-turns-new-leaf/)
-        + [Drummond & Rambaut 2007](https://www.mendeley.com/catalog/beast-bayesian-evolutionary-analysis-sampling-trees-1/)
+        + [Felsenstein 1978](https://doi.org/10.1093/sysbio/27.4.401)
+        + [Felsenstein 1985](https://doi.org/10.1111/j.1558-5646.1985.tb00420.x)
+        + [Lewis 2001](https://doi.org/10.1016/S0169-5347(00)02025-5)
+        + [Drummond & Rambaut 2007](https://doi.org/10.1186/1471-2148-7-214)
     + Items: Likelihood; Bayes; Parsimony
     + Potential exercises (choose your own)
         + [RAxML tutorial](http://sco.h-its.org/exelixis/web/software/raxml/hands_on.html): Fast maximum likelihood tree inference program.
