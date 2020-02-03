@@ -86,7 +86,7 @@ There is a no-credit online option, as well.
     + Items: Likelihood; Bayes; Parsimony
     + Potential exercises (choose your own)
         + [RAxML tutorial](http://sco.h-its.org/exelixis/web/software/raxml/hands_on.html): Fast maximum likelihood tree inference program.
-        + [RevBayes tutorials](https://revbayes.github.io/tutorials.html): Bayesian program with many different models.
+        + [RevBayes tutorials](https://revbayes.github.io/tutorials/dating/): Bayesian program with many different models.
         + [BEAST tutorials](http://treethinkers.org/tutorials/divergence-time-estimation-using-beast/): Bayesian tree inference program, especially used for getting chronograms.
         + [Cyverse discovery environment](https://de.cyverse.org/de/): Free service (thanks, NSF!) for running phylogenetic (and other) software
 
@@ -115,7 +115,7 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
         + [Heath et al. 2015](http://www.pnas.org/content/111/29/E2957.short): Using fossils as tips.
         + [Course book](https://bookdown.org/bomeara/comparative-methods/dating.html)
     + Exercise
-        + [RevBayes](http://revbayes.github.io/tutorials.html) tutorials on dating.
+        + [RevBayes](https://revbayes.github.io/tutorials/dating/) tutorials on dating.
 
 * Week 6
     + Topic: Discrete character models
