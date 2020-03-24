@@ -114,6 +114,12 @@ An important point to remember about trait-based diversification models is that 
 
 This exercise is partially based on the [HiSSE vignette](https://cran.r-project.org/web/packages/hisse/vignettes/hisse-vignette.html) by Jeremy Beaulieu. HiSSE is not the only method in this space; I focus on it here as an example approach.
 
+You will also need to download these files:
+
+* [testrecon1.rda](testrecon1.rda)
+* [testrecon2.rda](testrecon2.rda)
+* [testrecon3.rda](testrecon3.rda)
+
 First, simulate a tree and characters to use:
 
 ```{r simulate_data, eval=FALSE}

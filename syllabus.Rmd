@@ -167,10 +167,11 @@ trees. Mind-blowing (to me) paper on why to understand trait evolution we may ca
     + Exercise: [Diversification](diversification.html)
 
 * Week 11
+    + Catching up
+    
+* Week 12
     + Topic: Simulating data
     + Items: TreeSim, geiger
-
-* Week 12
     + Topic: Building a new comparative method
 
 * Week 13
