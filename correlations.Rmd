@@ -46,6 +46,7 @@ primates$trait[which(grepl("Hylobates",primates$trait[,1])),2]<-1
 
 trait1<-primates$trait[,2]
 names(trait1)<-primates$trait[,1]
+primates$tree <- ape::multi2di(primates$tree)
 plotSimmap(make.simmap(primates$tree, trait1), pts=FALSE, fsize=0.8)
 rate.mat.er<-rate.mat.maker(rate.cat=1, hrm=FALSE, ntraits=1, nstates=2, model="ER")
 print(rate.mat.er)

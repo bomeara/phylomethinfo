@@ -383,6 +383,7 @@ require(phytools)</code></pre>
 
 trait1&lt;-primates$trait[,2]
 names(trait1)&lt;-primates$trait[,1]
+primates$tree &lt;- ape::multi2di(primates$tree)
 plotSimmap(make.simmap(primates$tree, trait1), pts=FALSE, fsize=0.8)
 rate.mat.er&lt;-rate.mat.maker(rate.cat=1, hrm=FALSE, ntraits=1, nstates=2, model=&quot;ER&quot;)
 print(rate.mat.er)</code></pre>
