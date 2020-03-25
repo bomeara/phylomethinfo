@@ -354,7 +354,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Correlation models</h1>
 <h4 class="author">Brian C. O’Meara</h4>
-<h4 class="date">24 March, 2020</h4>
+<h4 class="date">25 March, 2020</h4>
 
 </div>
 
@@ -362,7 +362,7 @@ $(document).ready(function () {
 <p>You can do this on your own data, or on included data here.</p>
 <p>##Continuous data</p>
 <pre class="r"><code>library(geiger)
-library(pic)
+library(ape)
 tree.primates &lt;- read.tree(text=&quot;((((Homo:0.21,Pongo:0.21):0.28,Macaca:0.49):0.13,Ateles:0.62):0.38,Galago:1.00);&quot;) #using examples from ape ?pic
 X &lt;- c(4.09434, 3.61092, 2.37024, 2.02815, -1.46968)
 Y &lt;- c(4.74493, 3.33220, 3.36730, 2.89037, 2.30259)
@@ -405,16 +405,16 @@ print(rate.mat.er.4state)</code></pre>
 for(i in sequence(Ntip(primates$tree))) {
     if(primates$trait[i,2]==0 &amp;&amp; primates$trait[i,3]==0) {
         fourstate.trait[i]&lt;-0
-    }   
+    }
     if(primates$trait[i,2]==0 &amp;&amp; primates$trait[i,3]==1) {
         fourstate.trait[i]&lt;-1
-    }   
+    }
     if(primates$trait[i,2]==1 &amp;&amp; primates$trait[i,3]==0) {
         fourstate.trait[i]&lt;-2
-    }   
+    }
     if(primates$trait[i,2]==1 &amp;&amp; primates$trait[i,3]==1) {
         fourstate.trait[i]&lt;-3
-    }   
+    }
 }
 fourstate.data&lt;-data.frame(Genus_sp=primates$trait[,1], T1=fourstate.trait)
 
