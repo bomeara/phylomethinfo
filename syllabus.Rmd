@@ -7,7 +7,7 @@ output:
   word_document: default
 ---
 
-## Phylogenetic Methods (PhyloMeth). Spring 2020
+## Phylogenetic Methods (PhyloMeth). Spring 2021
 
 UT students may sign up at EEB 587.
 
@@ -17,7 +17,7 @@ Instructor: **[Brian O'Meara](http://www.brianomeara.info)** (bomeara@utk.edu)
 
 Course website: http://phylometh.info
 
-Office Hours (446 Hesler) by appointment (given few enrolled students this semester, being flexible with time makes sense).
+Office hours by appointment (and routinely available over slack as well)
 
 #### Anonymous feedback
 
@@ -64,7 +64,7 @@ There is a no-credit online option, as well.
 
 * Week 1
     + Topic: Getting ready
-    + Items: R, github, gitter, unit testing
+    + Items: R, github, unit testing
     + Instructions & exercise: [Getting Started](gettingstarted.html)
 
 * Week 2

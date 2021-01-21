@@ -14,7 +14,7 @@
 
 <title>Diversification</title>
 
-<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -34,6 +34,15 @@
   gtag('config', 'UA-103450-7');
 </script>
 
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -79,6 +88,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 
 
@@ -354,7 +364,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Diversification</h1>
 <h4 class="author">Brian O’Meara</h4>
-<h4 class="date">25 March, 2020</h4>
+<h4 class="date">21 January, 2021</h4>
 
 </div>
 
@@ -462,7 +472,7 @@ eps.anc = c(1,1,0,0)</code></pre>
 <h2>Setting up the transition rate matrix</h2>
 <p>The transition rate matrix is set up separate from the diversification rate parameters. This was intentional. We want to reinforce the idea that SSE models are not trait evolution models, but rather joint models for the tree and the evolution of a trait. It for this reason that we depict the transition rates in the canonical <strong>Q</strong> matrix format.</p>
 <p>To generate the index matrix describing the free parameters in the transition model, we use the <code>TransMatMaker()</code> function:</p>
-<pre class="r"><code>trans.rates = TransMatMaker(hidden.states=TRUE)
+<pre class="r"><code>trans.rates = TransMatMaker.old(hidden.states=TRUE)
 trans.rates</code></pre>
 <pre><code>##      (0A) (1A) (0B) (1B)
 ## (0A)   NA    4    7   10
@@ -503,13 +513,13 @@ trans.rates.nodual.allequal</code></pre>
 ## (0B)    1    0   NA    1
 ## (1B)    0    1    1   NA</code></pre>
 <p>Also note that in order to run a BiSSE model in HiSSE, the matrix set up would look like this:</p>
-<pre class="r"><code>trans.rates.bisse = TransMatMaker(hidden.states=FALSE)
+<pre class="r"><code>trans.rates.bisse = TransMatMaker.old(hidden.states=FALSE)
 trans.rates.bisse</code></pre>
 <pre><code>##     (0) (1)
 ## (0)  NA   2
 ## (1)   1  NA</code></pre>
 <p>Whatever transition matrix is designed, it is supplied to the <code>trans.rate=</code> argument in the <code>hisse()</code> call:</p>
-<pre class="r"><code>pp = hisse(phy, sim.dat, f=c(1,1), hidden.states=TRUE, turnover.anc=turnover.anc,
+<pre class="r"><code>pp = hisse.old(phy, sim.dat, f=c(1,1), hidden.states=TRUE, turnover.anc=turnover.anc,
            eps.anc=eps.anc, trans.rate=trans.rates.nodual.allequal)</code></pre>
 </div>
 <div id="a-common-mistake" class="section level2">
@@ -518,7 +528,7 @@ trans.rates.bisse</code></pre>
 <pre class="r"><code>turnover.anc = c(1,2,0,3)
 eps.anc = c(1,2,0,3)</code></pre>
 <p>The 0 in the 3rd entry for state 0B designates that the parameter is removed entirely from the model. A common mistake is that the transitions to and from 0B are not removed from the transition matrix. This needs to be done manually:</p>
-<pre class="r"><code>trans.rates &lt;- TransMatMaker(hidden.states=TRUE)
+<pre class="r"><code>trans.rates &lt;- TransMatMaker.old(hidden.states=TRUE)
 trans.rates.nodual.no0B &lt;- ParDrop(trans.rates, c(2,3,5,7,8,9,10,12))
 trans.rates.nodual.no0B</code></pre>
 <pre><code>##      (0A) (1A) (0B) (1B)
@@ -530,7 +540,7 @@ trans.rates.nodual.no0B</code></pre>
 <div id="changing-the-output" class="section level2">
 <h2>Changing the output</h2>
 <p>By default, hisse outputs turnover and extinction fraction. I recognize, of course, that this defies the convention of seeking to estimate and interpretation differences in net diversification (<span class="math inline">\(r_i = \lambda_i-\mu_i\)</span>). Therefore, users can alter how the final parameters are printed to the screen using the <code>output.type=</code> argument in the call <code>hisse()</code>. We’ve included three options: “turnover”, “net.div”, and “raw”, which outputs the results as estimates of speciation (<span class="math inline">\(\lambda_i\)</span>) and exinction (<span class="math inline">\(\mu_i\)</span>). Thus, to output net diversification:</p>
-<pre class="r"><code>pp = hisse(phy, sim.dat, f=c(1,1), hidden.states=TRUE, turnover.anc=turnover.anc,
+<pre class="r"><code>pp = hisse.old(phy, sim.dat, f=c(1,1), hidden.states=TRUE, turnover.anc=turnover.anc,
            eps.anc=eps.anc, trans.rate=trans.rates.nodual.allequal, output.type=&quot;net.div&quot;)</code></pre>
 </div>
 <div id="setting-up-the-2-state-character-independent-cid-2-model" class="section level2">
@@ -543,7 +553,7 @@ trans.rates.nodual.no0B</code></pre>
 eps.anc = c(1,1,2,2)</code></pre>
 <p>In other words, we are specifying that both 0A and 1A have one set of diversification rates, and 0B and 1B have another. That’s it. This is the “null-two” model.</p>
 <p>In regards to the transition rates, there are three ways in which they can be set up. The first is to assume the usual 8 transitions in the full hisse model (or 12 if dual transitions are allowed – for this tutorial we remove dual transitions):</p>
-<pre class="r"><code>trans.rates = TransMatMaker(hidden.states=TRUE)
+<pre class="r"><code>trans.rates = TransMatMaker.old(hidden.states=TRUE)
 trans.rates.nodual = ParDrop(trans.rates, c(3,5,8,10))</code></pre>
 <p>We could also assume all rates are equal:</p>
 <pre class="r"><code>trans.rates.nodual.allequal = ParEqual(trans.rates.nodual, c(1,2,1,3,1,4,1,5,1,6,1,7,1,8))
@@ -625,7 +635,7 @@ for(i in sequence(length(files))){
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

@@ -14,7 +14,7 @@
 
 <title>PhyloMeth: Syllabus</title>
 
-<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -24,6 +24,15 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -69,6 +78,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 
 
@@ -348,13 +358,13 @@ $(document).ready(function () {
 </div>
 
 
-<div id="phylogenetic-methods-phylometh.-spring-2020" class="section level2">
-<h2>Phylogenetic Methods (PhyloMeth). Spring 2020</h2>
+<div id="phylogenetic-methods-phylometh.-spring-2021" class="section level2">
+<h2>Phylogenetic Methods (PhyloMeth). Spring 2021</h2>
 <p>UT students may sign up at EEB 587.</p>
-<p>Syllabus version: 01:10 PM, 25 March, 2020</p>
+<p>Syllabus version: 12:20 AM, 21 January, 2021</p>
 <p>Instructor: <strong><a href="http://www.brianomeara.info">Brian O’Meara</a></strong> (<a href="mailto:bomeara@utk.edu" class="email">bomeara@utk.edu</a>)</p>
 <p>Course website: <a href="http://phylometh.info" class="uri">http://phylometh.info</a></p>
-<p>Office Hours (446 Hesler) by appointment (given few enrolled students this semester, being flexible with time makes sense).</p>
+<p>Office hours by appointment (and routinely available over slack as well)</p>
 <div id="anonymous-feedback" class="section level4">
 <h4>Anonymous feedback</h4>
 <p><a href="https://www.brianomeara.info/feedback.html" class="uri">https://www.brianomeara.info/feedback.html</a></p>
@@ -402,7 +412,7 @@ $(document).ready(function () {
 <li>Week 1
 <ul>
 <li>Topic: Getting ready</li>
-<li>Items: R, github, gitter, unit testing</li>
+<li>Items: R, github, unit testing</li>
 <li>Instructions &amp; exercise: <a href="gettingstarted.html">Getting Started</a></li>
 </ul></li>
 <li>Week 2
@@ -565,7 +575,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

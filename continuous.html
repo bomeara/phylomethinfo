@@ -14,7 +14,7 @@
 
 <title>Continuous character models</title>
 
-<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -34,6 +34,15 @@
   gtag('config', 'UA-103450-7');
 </script>
 
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -79,6 +88,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 
 
@@ -354,25 +364,25 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Continuous character models</h1>
 <h4 class="author">Brian C. O’Meara</h4>
-<h4 class="date">25 March, 2020</h4>
+<h4 class="date">21 January, 2021</h4>
 
 </div>
 
 
 <p>First get packages we need</p>
 <pre class="r"><code>install.packages(&quot;yearn&quot;)</code></pre>
-<pre><code>## Warning: package &#39;yearn&#39; is not available (for R version 3.6.2)</code></pre>
+<pre><code>## Warning: unable to access index for repository http://cran.cnr.berkeley.edu/src/contrib:
+##   cannot open URL &#39;http://cran.cnr.berkeley.edu/src/contrib/PACKAGES&#39;</code></pre>
+<pre><code>## Warning: package &#39;yearn&#39; is not available for this version of R
+## 
+## A version of this package for your version of R might be available elsewhere,
+## see the ideas at
+## https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</code></pre>
+<pre><code>## Warning: unable to access index for repository http://cran.cnr.berkeley.edu/bin/macosx/contrib/4.0:
+##   cannot open URL &#39;http://cran.cnr.berkeley.edu/bin/macosx/contrib/4.0/PACKAGES&#39;</code></pre>
 <pre class="r"><code>library(ape) #utility fns
-library(geiger) #utilty fns</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;geiger&#39;:
-##   method            from
-##   unique.multiPhylo ape</code></pre>
-<pre class="r"><code>library(OUwie)</code></pre>
-<pre><code>## Loading required package: nloptr</code></pre>
-<pre><code>## Loading required package: lattice</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;phytools&#39;:
-##   method      from  
-##   logLik.gfit geiger</code></pre>
+library(geiger) #utilty fns
+library(OUwie)</code></pre>
 <p>Now get the tree and data. For these exercises, knowing uncertainty in your measurements can also be important. (remember for homework to change <code>eval=FALSE</code> to <code>eval=TRUE</code>).</p>
 <pre class="r"><code>tree &lt;- read.tree(&quot;____PATH_TO_TREE_OR_SOME_OTHER_WAY_OF_GETTING_A_TREE____&quot;)
 continuous.data &lt;- read.csv(file=&quot;____PATH_TO_DATA_OR_SOME_OTHER_WAY_OF_GETTING_TRAITS____&quot;, stringsAsFactors=FALSE) #death to factors.</code></pre>
@@ -486,7 +496,7 @@ print(best)</code></pre>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
