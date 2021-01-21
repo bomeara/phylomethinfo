@@ -387,7 +387,7 @@ $(document).ready(function () {
 <p>Every student needs a <a href="http://github.com">GitHub</a> account so we can all use git together. Git is like a mixture of track changes in Microsoft Word, simultaneous editing in a Google Docs form, and a set of files backed up with Dropbox. It is used a lot by people writing software: you can keep track of who has added changes to code, roll back code to an earlier version, and merge code that was worked on different people at the same time. GitHub is a place where a lot of open source software is housed. It offers free accounts (with some restrictions). We’ll be using it to do homework and for our discussions.</p>
 <p><strong>Go to <a href="http://github.com">GitHub</a> now and get an account.</strong></p>
 <p>You will need a variety of software: <strong>right now, R and git</strong>; eventually, things like RevBayes, BEAST, and more. Having access to the command line (i.e., by using /Applications/Utilities/Terminal.app on a Mac) will make things easier.</p>
-<p>On a Mac, it is easiest to first install homebrew (will help a lot with later steps): see <a href="http://brew.sh">here</a> for how to do that. Then install git. For Linux, you probably already know how to use a package manager. For Windows, there is a git installer, but you might consider something like cygwin as well. Another option for all platforms is to use docker. In this case, it’s a way of installing tools to run in their own linux environment, but there’s also a web interface. To do this, <a href="https://docs.docker.com/engine/installation/">install Docker community edition</a>. Then follow the instructions at <a href="https://github.com/bomeara/phydocker" class="uri">https://github.com/bomeara/phydocker</a> for how to install and use a docker image that has R with all the packages we will need and various other useful software.</p>
+<p>On a Mac or Linux, it is easiest to first install homebrew (will help a lot with later steps): see <a href="http://brew.sh">here</a> for how to do that. Then install git. For Linux, you probably already know how to use a package manager. For Windows, there is a git installer, but you might consider something like cygwin as well. Another option for all platforms is to use docker. In this case, it’s a way of installing tools to run in their own linux environment, but there’s also a web interface. To do this, <a href="https://docs.docker.com/engine/installation/">install Docker community edition</a>. Then follow the instructions at <a href="https://github.com/bomeara/phydocker" class="uri">https://github.com/bomeara/phydocker</a> for how to install and use a docker image that has R with all the packages we will need and various other useful software.</p>
 <p>To <strong>install R</strong>, go to your preferred CRAN mirror to download it: I’d suggest <a href="https://cran.rstudio.com" class="uri">https://cran.rstudio.com</a>. What does all this mean? CRAN = Comprehensive R Archive Network: it’s where a lot of R packages are stored and readied for installation. A mirror is a computer that stores a copy of files on another computer. This is an old school approach to creating redundancy and convenience: rather than every R user in the world trying to copy a file off of one computer’s hard drive connected to the wall with one ethernet cable, there’s a whole set of computers, often with one fairly close to the user and so with faster download speeds. However, these can have their own issues: some might not update their copies often (look at <a href="https://cran.r-project.org/mirmon_report.html">this</a> to see some of these), some are slow, etc. A more modern approach is a content delivery network (CDN): a distributed set of servers, and a user is automatically routed to the best one for her or him given location, speed, server status, etc. When you watch a movie on Netflix, you’re not using the same server as everyone else, for example. The R mirror I suggest you use is one run by the RStudio commercial company: it’s actually a CDN and is secure and fast. Unlike the other R mirrors, it also records number of times each package is downloaded, which can be useful data for package authors.</p>
 <p>Once R is installed, it’s time to install packages. Most packages are on CRAN, though an increasing number are just on R-Forge, GitHub, or other sites. (CRAN has volunteers who check packages thoroughly to make sure they install on a variety of operating systems, keep to modern coding standards, deal with licensing appropriately, etc. (they can’t, of course, ensure that the statistical approaches are sound): this is great for users but some developers find it difficult, so put their packages elsewhere).</p>
 <p>One helpful way to navigate the array of R packages is through <a href="https://cran.r-project.org/web/views/">task views</a>: curated lists of packages. You can also <strong>install all the packages in a view</strong> and those they depend on. Do this:</p>
@@ -412,64 +412,15 @@ BiocManager::install(&quot;Biostrings&quot;, ask=FALSE)</code></pre>
 <li>Use markdown for analyses</li>
 <li>Start organizing work reproducibly</li>
 </ul>
-<p>A common approach in using R or similar tools is to enter commands one at a time. This is fast and interactive, but it can lead to lack of reproducibility. When you get reviewer’s comments back in 3 months, will you be able to remember what you did? Can you redo it with a small tweak? The next stage of analysis is to have commands entered into a file that you then paste into an interactive session, perhaps in blocks. This is easier, but leads to risks where people “know” what order to load lines, using different lines for different analyses, and so forth. We are going to use a single document format that incorporates R code and other text called rmarkdown. It is pretty lightweight compared to more sophisticated approaches like <a href="https://github.com/ropensci/drake">drake</a>, but it can be flexible and useful in general (this website and the course book are made this way, in fact).</p>
-<p>Rmarkdown is an expansion of the regular markdown format to allow use of R code. Markdown is like a very simple alternative to html that is far more readable. Rather than writing <code>&lt;b&gt;this&lt;/b&gt;</code> to make <strong>bold</strong> text, you can instead write <code>**this**</code>. “So what?” was my first thought, but it turns out it does make a lot of things easier. R markdown lets you embed R calls within a document and so intersperse text and code very naturally. It can embed figures, too.</p>
+<p>A common approach in using R or similar tools is to enter commands one at a time. This is fast and interactive, but it can lead to lack of reproducibility. When you get reviewer’s comments back in 3 months, will you be able to remember what you did? Can you redo it with a small tweak? The next stage of analysis is to have commands entered into a file that you then paste into an interactive session, perhaps in blocks. This is easier, but leads to risks where people “know” what order to load lines, using different lines for different analyses, and so forth. We are going to use <a href="https://github.com/ropensci/drake">drake</a> to organize our R code for this class (there is a successor, <a href="https://github.com/ropensci/targets">targets</a>, that fixes some of the issues with drake but it’s still actively changing, making it not great for class yet). There’s a <a href="https://books.ropensci.org/drake/">free book</a> to help.</p>
 <p>The other tool we will be using is git. Many people are familiar with Track Changes in Microsoft Word. Now imagine the same thing, but for many files, not just one, with the ability to roll any file back to any version, to merge changes from different people working at different times, and more. That is git (and other version control systems, though git has won for now). It’s software you can run on your own computer completely without using any external services. However, it is often convenient to use a website to host the files and allow different people to work on them collaboratively. The most popular one, and the one we are using in this class, is <a href="https://github.com/">GitHub</a>, though there are competitors like <a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org/product">BitBucket</a>, and more. These various sites compete with features, prices (all offer a free tier, some offer <a href="https://education.github.com/pack">student benefits</a>), and, lately, positions on various ethical questions relating to funding sources, open source philosophy, and more.</p>
 <p>Your assignment has three parts:</p>
 <ol style="list-style-type: decimal">
 <li>Set up git with Rstudio following <a href="https://happygitwithr.com/rstudio-git-github.html">Jenny Bryan’s book chapter on this</a>.</li>
 <li>Create a new project on GitHub for phylometh_exercises (or some other name)</li>
 <li>Within that project, make a folder for gettingstarted</li>
-<li>Copy the text below the instructions into a new file gettingstarted_exercise.Rmd (you can make this in Rstudio)</li>
-<li>Edit the file and render it when done. Make sure to add the new html file and the Rmd file back to GitHub, and contact me on slack to let me know it’s done.</li>
+<li>Add a file in R, commmit it, push it, and let me know where to see it online.</li>
 </ol>
-</div>
-<div id="code-to-paste-into-your-rmd-file" class="section level3">
-<h3>Code to paste into your Rmd file</h3>
-<pre><code>
----
-title: &quot;Getting Started&quot;
-author: &quot;Eager PhyloMeth student&quot;
-date: &quot;`r format(Sys.time(), &#39;%d %B, %Y&#39;)`&quot;
-output: html_document
----
-
-R calls in R markdown go within sections delimited by three backticks (`, the character just to the left of the 1 on US English keyboards; YMMV on other keyboards). For R code to execute, you must include {r} after the first three.
-
-```{r}
-2+3
-library(ape)
-plot(rcoal(5))
-```
-
-Look at the Markdown Cheatsheet [PDF](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) for more info.
-
-*To do*
-
-Take the following lines and do what they say.
-
-MAKE THIS LINE BOLD
-
-MAKE THE WORD ITALIC ITALICIZED
-
-MAKE THE FOLLOWING R CODE CREATE A PLOT IN THIS DOCUMENT
-
-plot(density(rnorm(1000)))
-
-### R exercise
-
-Edit this document so that this code all runs properly. You can create the final document by doing `rmarkdown::render(&quot;gettingstarted_exercise.Rmd&quot;)` in R or hitting the knit button in Rstudio.
-
-
-```{r}
-# Experience with coding.
-
-GetHowManyTrees &lt;- function(ntaxa=10) {
-    #ape can compute this for us. help(package=&quot;ape&quot;) for help on ape.
-    result &lt;- ___SOME FUNCTION WITH AN ARGUMENT_____
-    return(result)
-}
-```</code></pre>
 </div>
 </div>
 
