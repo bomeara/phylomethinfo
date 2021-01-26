@@ -364,7 +364,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">PhyloMeth: Getting Trees and Data</h1>
 <h4 class="author">Brian C. O’Meara</h4>
-<h4 class="date">21 January, 2021</h4>
+<h4 class="date">26 January, 2021</h4>
 
 </div>
 
@@ -375,42 +375,34 @@ $(document).ready(function () {
     library(rotl)
     library(ape)
 
- formica.id &lt;- tnrs_match_names(&quot;__________&quot;)$ott_id
+ formica.id &lt;- rotl::tnrs_match_names(&quot;__________&quot;)$ott_id
 
     # Now get Open Tree&#39;s current best estimate of the phylogeny for the group
     # They call this the tree of life; we can get the subtree for just this group.
-    formica.tree &lt;- tol_subtree(ott_id=formica.id)
+    formica.tree &lt;- rotl::tol_subtree(ott_id=formica.id)
 
     # Let&#39;s plot the tree:
-    plot.phylo(&quot;__________&quot;, type=&quot;fan&quot;, cex=0.2)</code></pre>
+    ape::plot.phylo(&quot;__________&quot;, type=&quot;fan&quot;, cex=0.2)</code></pre>
 <p>It has a lot of polytomies, representing uncertainty. A maximally resolved tree (if rooted) will have one fewer internal nodes than terminal nodes: think of a tree with three taxa, ((A,B),C): it will have the MRCA of A and B and the MRCA of A, B, and C: three terminals, two internal nodes. If it had no information, it would only have one node. So we can look at the ratio of number of internal nodes to number of possible internal nodes to figure out how resolved a tree is (subtracting 1 from each to account for the root node that must always exist)</p>
-<pre class="r"><code>    print(paste(&quot;The formica tree has &quot;, Ntip(formica.tree), &quot; terminals and &quot;,
-    Nnode(formica.tree), &quot; internal nodes out of &quot;,Ntip(formica.tree)-2,
+<pre class="r"><code>    print(paste(&quot;The formica tree has &quot;, ape::Ntip(formica.tree), &quot; terminals and &quot;,
+    Nnode(formica.tree), &quot; internal nodes out of &quot;,ape::Ntip(formica.tree)-2,
     &quot; possible, which means it is &quot;,
-    round(100*(Nnode(formica.tree)-1)/(Ntip(formica.tree)-3), 2),
+    round(100*(ape::Nnode(formica.tree)-1)/(ape::Ntip(formica.tree)-3), 2),
     &quot;% resolved&quot;, sep=&quot;&quot;))
 
     # Open Tree can also return the original studies with the source trees.
-    formica.studies &lt;- studies_find_studies(property=&quot;ot:focalCladeOTTTaxonName&quot;,
-    value=&quot;formica&quot;)
-    formica.studies.ids &lt;- unlist(formica.studies$study_ids)
+    formica.trees &lt;- studies_find_trees(property=&quot;ot:ottTaxonName&quot;, value=&quot;Formica&quot;, detailed=FALSE)
+    formica.studies.ids &lt;- unlist(formica.trees$study_ids)
 
     # Let&#39;s get info on the first study
-    formica.study1.metadata &lt;- get_study_meta(formica.studies[[1]][[1]])
-    print(get_publication(formica.study1.metadata))
+    formica.study1.metadata &lt;- rotl::get_study_meta(formica.studies.ids[1])
+    print(rotl::get_publication(formica.study1.metadata))
 
     # And let&#39;s get the tree from this study
-    # Look in rotl documentation for the right function
-    # Hint: get_study_trees() is close, but you don&#39;t know the tree.id
-  formica.study1.tree1 &lt;- get_______FUNCTION_FROM_rotl____(formica.studies.ids[[1]])
+  formica.study1.tree1 &lt;- get_study(formica.studies.ids[1])[[1]]
 
     # And plot it
-    plot.phylo(formica.study1.tree1, type=&quot;fan&quot;, cex=0.2)
-
-    #Return both trees
-    return.list &lt;- list(formica.tree, formica.study1.tree1)
-    names(return.list) &lt;- c(&quot;tol.tree&quot;, &quot;study1.tree&quot;)
-    return(return.list)
+    ape::plot.phylo(formica.study1.tree1, type=&quot;fan&quot;, cex=0.2)
 }</code></pre>
 <p>Another question is where to get data. One important way is to collect your own: go out and measure seed size, count insect hairs, measure polar bear weight, etc. However, another way is to gather data already published by others. As with trees, it is important to <em>cite your sources</em>. People have put a lot of work into gathering data, and citation is the main way they get credit. It is also an essential way to reward people who choose to share data for others to build upon, correct, and check for reproducibility (some researchers still choose not to share data). Having citations also lets you and future scientists check for problems.</p>
 <p>There are many places to get data. Perhaps the most convenient is to use <a href="https://ropensci.org/packages/">rOpenSci’s packages</a>, which have interfaces to places like <a href="https://github.com/ropensci/bold">Barcode of Life</a>, <a href="https://github.com/ropensci/rgbif">GBIF</a>, <a href="https://github.com/ropensci/reol">Encyclopedia of Life</a>, <a href="https://github.com/ropensci/neotoma">Neotoma paleoecological database</a>, <a href="https://github.com/ropensci/rfishbase">Fishbase</a>, and much more. A major source for datasets and supplemental from particular papers is the <a href="http://datadryad.org">Dryad</a> site. For plant traits, the <a href="https://www.try-db.org/TryWeb/Home.php">TRY database</a>, which has many different datasets, can be useful, though policies on sharing can differ by dataset. <a href="http://www.morphbank.net">Morphbank</a> has biological images while <a href="https://morphobank.org">Morphobank</a> has images and other phenotypic data. Katherine Bannar-Martin has a <a href="http://www.khbannarmartin.com/online-databases/">list</a> of databases for biological anthropology, mammals, fish, other vertebrates, plants, and more.</p>
