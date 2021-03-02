@@ -8,7 +8,6 @@ output: pdf_document
 First get packages we need
 
 ```{r, eval=TRUE}
-install.packages("yearn")
 library(ape) #utility fns
 library(geiger) #utilty fns
 library(OUwie)

@@ -23,6 +23,7 @@ GetTreeFromOpenTree <- function() {
 
 	# Let's plot the tree:
 	ape::plot.phylo("__________", type="fan", cex=0.2)
+}
 ```
 
 It has a lot of polytomies, representing uncertainty. A maximally resolved tree (if rooted) will have one fewer internal nodes than terminal nodes: think of a tree with three taxa, ((A,B),C): it will have the MRCA of A and B and the MRCA of A, B, and C: three terminals, two internal nodes. If it had no information, it would only have one node. So we can look at the ratio of number of internal nodes to number of possible internal nodes to figure out how resolved a tree is (subtracting 1 from each to account for the root node that must always exist)
