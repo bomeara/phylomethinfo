@@ -14,13 +14,22 @@
 
 <title>PhyloMeth: Syllabus</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11.3/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -35,11 +44,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -52,32 +56,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 
@@ -88,10 +66,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -108,40 +82,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -169,7 +116,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -181,7 +128,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -192,10 +139,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -207,7 +167,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -348,7 +307,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -361,7 +320,7 @@ $(document).ready(function () {
 <div id="phylogenetic-methods-phylometh.-spring-2021" class="section level2">
 <h2>Phylogenetic Methods (PhyloMeth). Spring 2021</h2>
 <p>UT students may sign up at EEB 587.</p>
-<p>Syllabus version: 09:52 AM, 02 March, 2021</p>
+<p>Syllabus version: 10:47 AM, 24 January, 2022</p>
 <p>Instructor: <strong><a href="http://www.brianomeara.info">Brian O’Meara</a></strong> (<a href="mailto:bomeara@utk.edu" class="email">bomeara@utk.edu</a>)</p>
 <p>Course website: <a href="http://phylometh.info" class="uri">http://phylometh.info</a></p>
 <p>Office hours by appointment (and routinely available over slack as well)</p>
@@ -386,8 +345,6 @@ $(document).ready(function () {
 <li>R</li>
 <li>And other software we’ll learn about during the course</li>
 </ul>
-<p>I am revising a textbook as part of the course * <a href="https://bookdown.org/bomeara/comparative-methods/">HTML version</a> * <a href="https://bookdown.org/bomeara/comparative-methods/comparative-methods.pdf">PDF</a></p>
-<p>It will be updated as we go, so check back frequently.</p>
 </div>
 <div id="evaluation" class="section level4">
 <h4>Evaluation</h4>
@@ -396,15 +353,20 @@ $(document).ready(function () {
 </div>
 <div id="teaching" class="section level4">
 <h4>Teaching</h4>
-<p>The class is generally flipped: rather than me droning at the front of the room, I’ll be releasing videos online for you to watch. They will be linked to from this syllabus. In class, talk about what was not clear from the videos about methods, and we’ll dig into that. We can also work on problematic parts of the exercises (you should do most of them before class) and talk about papers.</p>
+<p>The class is generally flipped: rather than me droning at the front of the room, you’ll be given content to process at home. This material will be linked to from this syllabus. In class, talk about what was not clear from the videos about methods, and we’ll dig into that. We can also work on problematic parts of the exercises (you should do most of them before class) and talk about papers.</p>
+</div>
+<div id="covid-19" class="section level4">
+<h4>Covid-19</h4>
+<p>The Volunteer Creed reminds us that we bear the torch to give light to others. As Volunteers, we commit to caring for one another and for the members of the communities in which we live, work, and learn.</p>
+<p>For your safety and the safety of your fellow student scholars, I ask that you wear a properly fitted mask while in class. This greatly reduces the transmission among residents of our community, helping to end this surge sooner and reduce the potential for another variant. It also reduces the chance that we unknowingly pass the disease to an unvaccinated or immunocompromised individual.</p>
+<p>Current CDC guidelines recommend using N95, KN94 or K95 masks, which are the most effective in preventing infection from the current Omicron variant. A reasonable alternative is double masking.</p>
+<p>Almost all of us prefer to learn face-to-face in a regular classroom setting - it is the core of teaching and learning here at UT. I have structured the in-person class to maximize student learning based on previous semesters. However, as covid surges and absences increase, I will need to balance the needs of in-person students as well as those who temporarily cannot attend. In this case, I may make a class-by-class instructional decision to hold class online so that ALL students can learn together. This incidence should be reduced as covid passes.</p>
+<p>The classroom is a shared environment: with a different group of students, or a different instructor, the class could work very differently. It is on all of us to create a classroom where everyone can feel safe, be safe, and learn. To that end, please do not impose a higher degree of risk on people than they themselves are comfortable with. If everyone in your study group is comfortable meeting outside, that’s fine! If one person does not want to, do not force them. Within the classroom space, many people will be uncomfortable, and be put at higher risk, to be around people without masks. Please show consideration for each other.</p>
+<p>If you are unwilling or unable to wear a mask, or you have health conditions that place you at a higher risk, you may attend class remotely. Students under quarantine or isolation should also attend class remotely.</p>
 </div>
 <div id="connecting" class="section level4">
 <h4>Connecting</h4>
 <p>The class discussion board is public on Slack; you will need the [Slack invite code]<a href="https://join.slack.com/t/phylometh/shared_invite/enQtOTAwMDQwMTMyODMyLTM2N2I1YmRjNzhkM2ZhYWVhMzlhMjU1YzExZTQ2MGRlYTQyMzA3YzBjYWQyYzhmNGMxYzgzOTJhZTAwYTA2NzI" class="uri">https://join.slack.com/t/phylometh/shared_invite/enQtOTAwMDQwMTMyODMyLTM2N2I1YmRjNzhkM2ZhYWVhMzlhMjU1YzExZTQ2MGRlYTQyMzA3YzBjYWQyYzhmNGMxYzgzOTJhZTAwYTA2NzI</a>) to join.</p>
-</div>
-<div id="online-option" class="section level4">
-<h4>Online option</h4>
-<p>There is a no-credit online option, as well.</p>
 </div>
 <div id="schedule" class="section level3">
 <h3>Schedule</h3>
@@ -561,7 +523,7 @@ $(document).ready(function () {
 </ul>
 <p><strong>Course made possible by</strong>: NSF CAREER grant to O’Meara &amp; ongoing support from the Department of Ecology &amp; Evolutionary Biology, U. of Tennessee, Knoxville.</p>
 <p>My goal is to have you learn. If you are having trouble with something in the course, or if there is a topic you just have to learn more about, let me know (email, office hours, online forum, etc.). Faculty often use evaluations at the end of the semester to get info from students so we can improve before the next class, but this does not help you directly. To allow the class to improve while you are taking it, I have created a site for anonymous feedback at <a href="https://www.brianomeara.info/feedback.html" class="uri">https://www.brianomeara.info/feedback.html</a> (and yes, it is really anonymous). Let me know things that are going well or poorly — both are important. I might not implement all your suggestions, but they will all be read and considered, generally the same day you submit them.</p>
-<p>Any student who feels s/he may need an accommodation based on the impact of a disability should contact me privately to discuss specific needs. Please contact the Office of Disability Services at 865-974-6087 in Dunford Hall to coordinate reasonable accommodations for students with documented disabilities.</p>
+<p>Any student who feels they may need an accommodation based on the impact of a disability should contact me privately to discuss specific needs. Please contact the Office of Disability Services at 865-974-6087 in Dunford Hall to coordinate reasonable accommodations for students with documented disabilities.</p>
 <p>All relevant University policies (including, but not limited to, policies on academic integrity, attendance, etc.) apply to this course. In the case of any conflict between the policies in this syllabus and University policy, University policy applies. The instructor reserves the right to revise, alter, and/or amend this syllabus as necessary. Students will be notified by email of any such revisions, alterations, and/or amendments.</p>
 </div>
 </div>
@@ -593,7 +555,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
