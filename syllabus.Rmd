@@ -7,7 +7,7 @@ output:
   word_document: default
 ---
 
-## Phylogenetic Methods (PhyloMeth). Spring 2021
+## Phylogenetic Methods (PhyloMeth). Spring 2022
 
 UT students may sign up at EEB 587.
 
