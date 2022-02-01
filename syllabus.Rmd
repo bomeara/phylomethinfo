@@ -53,18 +53,19 @@ The Volunteer Creed reminds us that we bear the torch to give light to others. A
 
 For your safety and the safety of your fellow student scholars, I ask that you wear a properly fitted mask while in class. This greatly reduces the transmission among residents of our community, helping to end this surge sooner and reduce the potential for another variant. It also reduces the chance that we unknowingly pass the disease to an unvaccinated or immunocompromised individual.
 
-Current CDC guidelines recommend using N95, KN94 or K95 masks, which are the most effective in preventing infection from the current Omicron variant. A reasonable alternative is double masking.
+Current CDC guidelines recommend using N95, KN94 or K95 masks, which are the most effective in preventing infection from the current Omicron variant.
  
-Almost all of us prefer to learn face-to-face in a regular classroom setting - it is the core of teaching and learning here at UT. I have structured the in-person class to maximize student learning based on previous semesters. However, as covid surges and absences increase, I will need to balance the needs of in-person students as well as those who temporarily cannot attend. In this case, I may make a class-by-class instructional decision to hold class online so that ALL students can learn together. This incidence should be reduced as covid passes.
+Almost all of us prefer to learn face-to-face in a regular classroom setting - it is the core of teaching and learning here at UT. I have structured the in-person class to maximize student learning based on previous semesters. However, as covid surges and absences increase, I will need to balance the needs of in-person students as well as those who temporarily cannot attend (which may include me if I need to quarantine or isolate). In this case, I may make a class-by-class instructional decision to hold class online so that ALL students can learn together. The chance of this should be reduced as covid passes.
  
-The classroom is a shared environment: with a different group of students, or a different instructor, the class could work very differently. It is on all of us to create a classroom where everyone can feel safe, be safe, and learn. To that end, please do not impose a higher degree of risk on people than they themselves are comfortable with. If everyone in your study group is comfortable meeting outside, that’s fine! If one person does not want to, do not force them. Within the classroom space, many people will be uncomfortable, and be put at higher risk, to be around people without masks. Please show consideration for each other.
+The classroom is a shared environment: with a different group of students, or a different instructor, the class could work very differently. It is on all of us to create a classroom where everyone can feel safe, be safe, and learn. To that end, please do not impose a higher degree of risk on people than they themselves are comfortable with. If everyone in your study group is comfortable meeting outside, that’s fine! If one person does not want to, please do not force them. Within the classroom space, many people will be uncomfortable, and be put at higher risk, to be around people without masks. Please show consideration for each other.
 
-If you are unwilling or unable to wear a mask, or you have health conditions that place you at a higher risk, you may attend class remotely. Students under quarantine or isolation should also attend class remotely.
- 
+Any student may attend class remotely for whatever reason: this is **strongly** advised for students who are isolating (have covid) or under quarantine (may have been exposed). Remote attendance may also be a good option for students who would prefer not to wear a mask but who want to minimize risk to others.
+
+Please fill out the [covid support form](https://covidform.utk.edu/) if you may need to quarantine or isolate; it will let the campus covid support team give you guidance on next steps, and it also lets UTK track the current state of the pandemic on campus.
 
 #### Connecting
 
-The class discussion board is public on Slack; you will need the [Slack invite code]https://join.slack.com/t/phylometh/shared_invite/enQtOTAwMDQwMTMyODMyLTM2N2I1YmRjNzhkM2ZhYWVhMzlhMjU1YzExZTQ2MGRlYTQyMzA3YzBjYWQyYzhmNGMxYzgzOTJhZTAwYTA2NzI) to join.
+The class discussion board is public on Slack; you will need the [Slack invite code](https://join.slack.com/t/phylometh/shared_invite/enQtOTAwMDQwMTMyODMyLTM2N2I1YmRjNzhkM2ZhYWVhMzlhMjU1YzExZTQ2MGRlYTQyMzA3YzBjYWQyYzhmNGMxYzgzOTJhZTAwYTA2NzI) to join.
 
 ### Schedule
 
