@@ -323,7 +323,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">PhyloMeth: Getting Trees and Data</h1>
 <h4 class="author">Brian C. O’Meara</h4>
-<h4 class="date">31 January, 2022</h4>
+<h4 class="date">03 February, 2022</h4>
 
 </div>
 
@@ -342,7 +342,12 @@ $(document).ready(function () {
 
     # Let&#39;s plot the tree:
     ape::plot.phylo(&quot;__________&quot;, type=&quot;fan&quot;, cex=0.2)
-}</code></pre>
+    
+    # and return the tree
+    return(formica.tree)
+}
+
+formica.tree &lt;- GetTreeFromOpenTree()</code></pre>
 <p>It has a lot of polytomies, representing uncertainty. A maximally resolved tree (if rooted) will have one fewer internal nodes than terminal nodes: think of a tree with three taxa, ((A,B),C): it will have the MRCA of A and B and the MRCA of A, B, and C: three terminals, two internal nodes. If it had no information, it would only have one node. So we can look at the ratio of number of internal nodes to number of possible internal nodes to figure out how resolved a tree is (subtracting 1 from each to account for the root node that must always exist)</p>
 <pre class="r"><code>    print(paste(&quot;The formica tree has &quot;, ape::Ntip(formica.tree), &quot; terminals and &quot;,
     Nnode(formica.tree), &quot; internal nodes out of &quot;,ape::Ntip(formica.tree)-2,
@@ -362,8 +367,7 @@ $(document).ready(function () {
   formica.study1.tree1 &lt;- get_study(formica.studies.ids[1])[[1]]
 
     # And plot it
-    ape::plot.phylo(formica.study1.tree1, type=&quot;fan&quot;, cex=0.2)
-}</code></pre>
+    ape::plot.phylo(formica.study1.tree1, type=&quot;fan&quot;, cex=0.2)</code></pre>
 <p>Another question is where to get data. One important way is to collect your own: go out and measure seed size, count insect hairs, measure polar bear weight, etc. However, another way is to gather data already published by others. As with trees, it is important to <em>cite your sources</em>. People have put a lot of work into gathering data, and citation is the main way they get credit. It is also an essential way to reward people who choose to share data for others to build upon, correct, and check for reproducibility (some researchers still choose not to share data). Having citations also lets you and future scientists check for problems.</p>
 <p>There are many places to get data. Perhaps the most convenient is to use <a href="https://ropensci.org/packages/">rOpenSci’s packages</a>, which have interfaces to places like <a href="https://github.com/ropensci/bold">Barcode of Life</a>, <a href="https://github.com/ropensci/rgbif">GBIF</a>, <a href="https://github.com/ropensci/reol">Encyclopedia of Life</a>, <a href="https://github.com/ropensci/neotoma">Neotoma paleoecological database</a>, <a href="https://github.com/ropensci/rfishbase">Fishbase</a>, and much more. A major source for datasets and supplemental from particular papers is the <a href="http://datadryad.org">Dryad</a> site. For plant traits, the <a href="https://www.try-db.org/TryWeb/Home.php">TRY database</a>, which has many different datasets, can be useful, though policies on sharing can differ by dataset. <a href="http://www.morphbank.net">Morphbank</a> has biological images while <a href="https://morphobank.org">Morphobank</a> has images and other phenotypic data. Katherine Bannar-Martin has a <a href="http://www.khbannarmartin.com/online-databases/">list</a> of databases for biological anthropology, mammals, fish, other vertebrates, plants, and more.</p>
 <p>For homework, consider what biological question you’re curious about and gather data for it. Importantly, <strong>look at the data</strong> before using it. Data are messy. For example, take latitude and longitude. Nice, continuous numbers: not “smooth vs hairy” but something you just read from your GPS – sure, there may be some imprecision, but it’s not that bad, right? However, such data are full of errors: incorrect taxonomy, dropping signs or direction labels (140.5 W longitude is -140.5, not 140.5), entering 0,0 for missing data rather than leaving blank, recording the location of the collection where the specimen is housed rather than where it was collected, recording location of specimens under cultivation or in captivity (a polar bear in the San Diego Zoo), or just simple errors. Other kinds of data have their own problems: fish length – is it snout to end of tail fin, snout to vent? Is it for the biggest adult (beware indeterminate growth), average adult, whatever fish, adult or juvenile, was caught? For plant growth habit, how are woody vines counted: as woody (since they have woody structure) or herbaceous (not self supporting or tall)? Any time continuous variation is put into discrete bins, there are weird corner cases – after all, it’s very rare for a trait to change instantly in one generation, even seemingly discrete ones like presence of eyes (what about cave fish?) or number of limbs (skinks? male boa constrictors with pelvic spurs?).</p>
