@@ -14,7 +14,7 @@
 
 <title>Continuous character models</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.11.3/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -323,17 +323,19 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Continuous character models</h1>
 <h4 class="author">Brian C. O’Meara</h4>
-<h4 class="date">03 February, 2022</h4>
+<h4 class="date">24 February, 2022</h4>
 
 </div>
 
 
 <p>First get packages we need</p>
-<pre class="r"><code>library(ape) #utility fns
-library(geiger) #utilty fns
+<pre class="r"><code>library(ape) #utility fns</code></pre>
+<pre><code>## Warning: package &#39;ape&#39; was built under R version 4.1.2</code></pre>
+<pre class="r"><code>library(geiger) #utilty fns
 library(OUwie)</code></pre>
 <pre><code>## Loading required package: corpcor</code></pre>
 <pre><code>## Loading required package: nloptr</code></pre>
+<pre><code>## Warning: package &#39;nloptr&#39; was built under R version 4.1.2</code></pre>
 <pre><code>## Loading required package: RColorBrewer</code></pre>
 <p>Now get the tree and data. For these exercises, knowing uncertainty in your measurements can also be important. (remember for homework to change <code>eval=FALSE</code> to <code>eval=TRUE</code>).</p>
 <pre class="r"><code>tree &lt;- read.tree(&quot;____PATH_TO_TREE_OR_SOME_OTHER_WAY_OF_GETTING_A_TREE____&quot;)
